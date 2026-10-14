@@ -9,7 +9,7 @@
 * [**Conclusiones**](#conclusiones)
 * [**Bibliografía**](#bibliografia)
 
-[Imagen GitHub](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEIWBtXQlfZSFnUMVJ98xa2cbwoDF1pvYcKH2eZgsQhQ&s=10)
+![Imagen GitHub](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEIWBtXQlfZSFnUMVJ98xa2cbwoDF1pvYcKH2eZgsQhQ&s=10)
 
 ### Introducción 
 [Volver al índice](#indice)
@@ -34,6 +34,9 @@ En este informe se va a hablar de los usos de esta plataforma, de los pasos a se
 ### **Pasos a seguir para conseguir las diferentes acciones**
 [Volver al índice](#indice)
 
+![Imagen de Acciones de GitHub](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8kXfpHcyHLwPf80EIHHqgpyXMQF3M4oxN75mbz4rVpg&s=10)
+
+
 Antes de proceder con los pasos primero hay que entender _**qué son las acciones de GitHub**_. Las acciones de GitHub o _GitHub Actions_ son una herramienta de automatización integrada directamente en la plataforma de GitHub que te permite crear flujos de trabajo (workflows) para compilar, probar, empaquetar, liberar o implementar tu código.
 Todo esto es bastante útil para la _integración y entrega continua_, _la automatización de tareas repetitivas_ o el _soporte multi-lenguage_. 
 
@@ -44,6 +47,8 @@ Todo esto es bastante útil para la _integración y entrega continua_, _la autom
 * Ejecutadores (Runners): Son las máquinas virtuales proporcionadas por GitHub donde se ejecutan realmente estos códigos y tareas.
 * GitHub Marketplace: Un directorio donde puedes encontrar y utilizar miles de acciones creadas por la comunidad y por diversas empresas para ahorrar tiempo.
 
+![Imagen de los conceptos](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr_1szYYhGP-MPANk_556BeWtxpdiD9JCxdqdCqgbLSS2Ny6QPC82sjoQ&s=10)
+
 Ahora sí una vez explicado y entendido el funcionamiento y los conceptos clave vamos a ver los **pasos a seguir para conseguir estas acciones**: 
 
 1. Acceder a la sección de Acciones:
@@ -53,4 +58,8 @@ Ahora sí una vez explicado y entendido el funcionamiento y los conceptos clave 
 
 2. Elegir o crear un flujo de trabajo (_Workflow_)
    * **Usar una plantilla**: Selecciona una de las plantillas sugeridas (Node.js, Docker...) y haz clic en **Configure** o Configurar
-   * 
+   * **Crear un archivo manual:** Si prefieres crearlo desde cero o el directorio no existe:
+     *   Ve a la pestaña principal del repositorio y haz clic en **Add file** y **Create new file**
+     *   Nómbralo con la ruta y extensión _YAML_: **_.github/workflows/nombre-archivo.yml_**
+
+3. 
