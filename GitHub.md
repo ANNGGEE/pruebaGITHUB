@@ -2,7 +2,7 @@
 ## Ángela Gómez López
 
 ### INDICE
-* [**Introducción**](#introduccion)
+* [**Introducción**](#introducción)
 * [**¿Qué vamos a ver en este informe?**](#qué-vamos-a-ver-en-este-informe)
 * [**Usos de GitHub**](#usos-de-github)
 * [**Acciones**](#pasos-a-seguir-para-conseguir-las-diferentes-acciones)
