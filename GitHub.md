@@ -1,12 +1,27 @@
 # Práctica GitHub + MarkDown
 ## Ángela Gómez López
-### Introducción
+
+### INDICE
+* [**Introducción**](#introduccion)
+* [**¿Qué vamos a ver en este informe?**](#qué-vamos-a-ver-en-este-informe)
+* [**Usos de GitHub**](#usos-de-github)
+* [**Acciones**](#pasos-a-seguir-para-conseguir-las-diferentes-acciones)
+* [**Conclusiones**](#conclusiones)
+* [**Bibliografía**](#bibliografia)
+
+### Introducción 
+[Volver al índice](#indice)
+
 GitHub es una plataforma en la nube y una red social para desarrolladores que permite almacenar, administrar y trabajar en proyectos de software de forma individual y colaborativa.
 
 ### ¿Qué vamos a ver en este informe?
+[Volver al índice](#indice)
+
 En este informe se va a hablar de los usos de esta plataforma, de los pasos a seguir para conseguir diferentes acciones, además de una pequeña conclusión de los puntos tratados en el documento. 
 
 ### **Usos de GitHub**
+[Volver al índice](#indice)
+
 * **Almacenamiento en la nube:** GitHub permite guardar los proyectos en la nube mediante repositorios, que contienen los archivos y el historial de cambios de un proyecto. Esto facilita mantener una copia del trabajo en Internet y recuperarlo si se pierde información, falla el ordenador u ocurre cualquier imprevisto. Además, permite acceder a los archivos desde distintos dispositivos, compartirlos con otras personas y trabajar en equipo sin perder el seguimiento de las modificaciones realizadas.
 * **Control de versiones con Git:** Funciona sobre _Git_, que es un sistema creado para rastrear cambios en el código. Guarda cada modificación, permitiendo regresar a versiones anteriores si es necesario.
 * **Trabajo en equipo:** Facilita que varias personas editen el mismo proyecto al mismo tiempo sin interferir en el trabajo de los demás mediante _ramas_ (branches) y _peticiones de extracción_ (pull request). 
@@ -15,10 +30,12 @@ En este informe se va a hablar de los usos de esta plataforma, de los pasos a se
 * **Herramientas avanzadas:** Incluye funciones de automatización, gestión de tareas e inteligencia artificial, como puede ser GitHub Copilot.
 
 ### **Pasos a seguir para conseguir las diferentes acciones**
+[Volver al índice](#indice)
+
 Antes de proceder con los pasos primero hay que entender _**qué son las acciones de GitHub**_. Las acciones de GitHub o _GitHub Actions_ son una herramienta de automatización integrada directamente en la plataforma de GitHub que te permite crear flujos de trabajo (workflows) para compilar, probar, empaquetar, liberar o implementar tu código.
 Todo esto es bastante útil para la _integración y entrega continua_, _la automatización de tareas repetitivas_ o el _soporte multi-lenguage_. 
 
-Algunos conceptos clave pueden ser: 
+**Algunos conceptos clave pueden ser:** 
 * Flujos de trabajo (workflows): Procesos automatizados y configurables que se definen en tu repositorio mediante archivos de texto con formato YAML.
 * Eventos (Events): Desencadenantes que inician un flujo de trabajo, por ejemplo, cuando alguien hace _push_, se abre una solicitud de extracción de _pull request_, o según una programación de hora.
 * Acciones (Actions): Son bloques de código individuales, reutilizables y empaquetados que realizan tareas específicas dentro de un flujo de trabajo.
@@ -27,3 +44,11 @@ Algunos conceptos clave pueden ser:
 
 Ahora sí una vez explicado y entendido el funcionamiento y los conceptos clave vamos a ver los **pasos a seguir para conseguir estas acciones**: 
 
+1. Acceder a la sección de Acciones:
+   * Entra a tu repositorio de **GitHub**
+   * Haz clic en la pestaña de _Actions_ en el menú superior
+   * GitHub detectará automáticamente el lenguaje o tipo de proyecto de tu código y te mostrará sugerencias de plantillas de flujos de trabajo (_workflows_)
+
+2. Elegir o crear un flujo de trabajo (_Workflow_)
+   * **Usar una plantilla**: Selecciona una de las plantillas sugeridas (Node.js, Docker...) y haz clic en **Configure** o Configurar
+   * 
