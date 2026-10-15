@@ -51,15 +51,43 @@ Todo esto es bastante útil para la _integración y entrega continua_, _la autom
 
 Ahora sí una vez explicado y entendido el funcionamiento y los conceptos clave vamos a ver los **pasos a seguir para conseguir estas acciones**: 
 
-1. Acceder a la sección de Acciones:
+1. **Acceder a la sección de Acciones**
    * Entra a tu repositorio de **GitHub**
    * Haz clic en la pestaña de _Actions_ en el menú superior
    * GitHub detectará automáticamente el lenguaje o tipo de proyecto de tu código y te mostrará sugerencias de plantillas de flujos de trabajo (_workflows_)
+   * Si el repositorio todavía no tiene flujos de trabajo configurados, GitHub puede mostrarte sugerencias de plantillas según el lenguaje o el tipo de proyecto.
 
-2. Elegir o crear un flujo de trabajo (_Workflow_)
-   * **Usar una plantilla**: Selecciona una de las plantillas sugeridas (Node.js, Docker...) y haz clic en **Configure** o Configurar
+2. **Elegir o crear un flujo de trabajo (_Workflow_)**
+   * **Usar una plantilla**: Selecciona una de las plantillas sugeridas (Node.js, Docker...) y haz clic en **Configure** o Configurar para adaptarla a las necesidades de tu proyecto.
    * **Crear un archivo manual:** Si prefieres crearlo desde cero o el directorio no existe:
      *   Ve a la pestaña principal del repositorio y haz clic en **Add file** y **Create new file**
      *   Nómbralo con la ruta y extensión _YAML_: **_.github/workflows/nombre-archivo.yml_**
 
-3. 
+       > Esta carpeta es importante, ya que GitHub Actions busca en ella los archivos que definen los flujos de trabajo del repositorio.
+
+3. **Definir la estructura YAML del flujo**
+   
+   El archivo YAML contiene las instrucciones que indican cuándo y cómo se ejecutará el flujo de trabajo. Sus elementos principales son:
+   * **name:** Establece el nombre visible de tu flujo de trabajo.
+   * **on:** define los eventos que activarán su ejecución, como un _push_ o _pull_request_.
+   * **jobs**: Define los trabajos que componen el flujo de trabajo (workflow). Cada trabajo se ejecuta en un entorno de ejecución (runner), que puede utilizar Linux, Windows o macOS. A su vez, cada trabajo está formado por una serie de pasos (steps) que se ejecutan de forma secuencial y que pueden consistir en comandos de consola o en el uso de acciones (actions) ya creadas por GitHub o por otros desarrolladores.
+   * **steps:** especifica los pasos de cada trabajo, que pueden ejecutar comandos de consola o utilizar acciones previamente creadas por GitHub o por otros desarrolladores.
+  
+![workflow](https://user-images.githubusercontent.com/12570515/262074692-01e51004-343b-43dc-9f54-4662a69d7384.png)
+
+4. **Guardar y ejecutar**
+   * Una vez terminado el archivo, pulsa **Commit changes...** para guardar los cambios en el repositorio.
+   * Si el archivo se incorpora a una rama y se produce uno de los eventos definidos en el YAML, _GitHub Actiones_ activrá el flujo de forma automática según el evento configurado (por ejemplo, al hacer un _push_).
+   * Puedes volver a la pestaña **Actions** para monitorizar en tiempo real el progreso de cada paso y ver los registros (_logs_) de salida.
+  
+5. **Añadir acciones externas o personalizadas**
+   * Puedes buscar acciones creadas por otros desarrolladores en el GitHub Marketplace e integrarlas en tus pasos con la sintaxis _uses: nombre-accion/version_
+   * Esta acción permite obtener el código del repositorio en el entorno de ejecución para que los siguientes pasos puedan trabajar con él. La versión debe elegirse y mantenerse de acuerdo con las necesidades de seguridad y mantenimiento del proyecto.
+
+En definitiva, GitHub Actions permite **automatizar tareas** como ejecutar pruebas, comprobar la calidad del código, generar compilaciones o desplegar aplicaciones, reduciendo la intervención manual y facilitando la integración continua y la entrega continua (CI/CD).
+
+### **Conclusiones**
+[Volver al índice](#indice)
+
+### **Bibliografía**
+[Volver al índice](#indice)
