@@ -203,7 +203,7 @@ Ahora sí una vez explicado y entendido el funcionamiento y los conceptos clave 
 
 En definitiva, GitHub Actions permite **automatizar tareas** como ejecutar pruebas, comprobar la calidad del código, generar compilaciones o desplegar aplicaciones, reduciendo la intervención manual y facilitando la integración continua y la entrega continua (CI/CD).
 
-![GitHubActions](https://www.glukhov.org/developer-tools/ci-cd/github-actions-cheatsheet/github-actions-flow-5-680x496.jpg)
+
 
 ### **Conclusiones**
 [Volver al índice](#indice)
