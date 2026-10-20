@@ -5,6 +5,9 @@
 * [**Introducción**](#introducción)
 * [**¿Qué vamos a ver en este informe?**](#qué-vamos-a-ver-en-este-informe)
 * [**Usos de GitHub**](#usos-de-github)
+  * [**Conceptos Clave**](#conceptos-clave)
+  * [**Usos Básicos**](#usos-basicos)
+  * [**¿Cómo conseguir las Acciones disponibles en GitHub?**](#cómo-conseguir-las-acciones-disponibles-en-github)
 * [**Acciones**](#pasos-a-seguir-para-conseguir-las-diferentes-acciones)
 * [**Conclusiones**](#conclusiones)
 * [**Bibliografía**](#bibliografia)
@@ -36,6 +39,8 @@ En este informe se va a hablar de los usos de esta plataforma, de los pasos a se
 
 ![Imagen de Acciones de GitHub](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8kXfpHcyHLwPf80EIHHqgpyXMQF3M4oxN75mbz4rVpg&s=10)
 
+**Conceptos clave:** 
+[Volver al índice](#indice)
 
 Antes de proceder con los pasos primero hay que entender _**qué son las acciones de GitHub**_. Las acciones de GitHub o _GitHub Actions_ son una herramienta de automatización integrada directamente en la plataforma de GitHub que te permite crear flujos de trabajo (workflows) para compilar, probar, empaquetar, liberar o implementar tu código.
 Todo esto es bastante útil para la _integración y entrega continua_, _la automatización de tareas repetitivas_ o el _soporte multi-lenguage_. 
@@ -49,7 +54,119 @@ Todo esto es bastante útil para la _integración y entrega continua_, _la autom
 
 ![Imagen de los conceptos](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr_1szYYhGP-MPANk_556BeWtxpdiD9JCxdqdCqgbLSS2Ny6QPC82sjoQ&s=10)
 
-Ahora sí una vez explicado y entendido el funcionamiento y los conceptos clave vamos a ver los **pasos a seguir para conseguir estas acciones**: 
+**Usos Básicos** 
+[Volver al índice](#indice)
+A continuación vamos a ver los **usos más básicos** de GitHub para luego entender mejor lo que se va a ver a continuación en las _acciones_ y saber de lo que se está hablando: 
+1. **Crear un repositorio**
+Un _repositorio_ es un espacio donde se almacenan los archivos de un proyecto y su historial de modificaciones. Puede ser **público**, para que cualquier persona pueda verlo, o **privado**, para limitar su acceso a los usuarios autorizados.
+
+**Pasos para crear un repositorio:**
+
+    1. Inicia sesión en _GitHub_.
+    2. Haz clic en el **símbolo +**, situado en la parte superior derecha, y selecciona _New repository_.
+    3. Escribe un nombre para el repositorio y, si lo deseas, añade una descripción.
+    4. Selecciona si será **público (Public)** o **privado (Private)**.
+    5. Opcionalmente, marca la casilla para añadir un archivo _README_, que servirá para describir el proyecto.
+    6. Pulsa _Create repository_ para finalizar.
+
+Una vez creado, podrás añadir archivos, organizar el proyecto y colaborar con otros usuarios.
+
+2. **Subir archivos a un repositorio**
+GitHub permite almacenar archivos de diferentes tipos, como documentos Markdown, imágenes, archivos de código o configuraciones.
+
+**Pasos para subir un archivo desde la página web:**
+
+    1. Entra en el repositorio donde quieras guardar el archivo.
+    2. Pulsa _Add file_ y selecciona _Upload files_.
+    3. Arrastra los archivos a la zona indicada o selecciónalos desde tu ordenador.
+    4. Escribe un mensaje que describa los cambios realizados en el apartado de _Commit changes_.
+    5. Confirma la operación pulsando _Commit changes_.
+
+Los archivos quedarán almacenados en el repositorio y podrás consultarlos desde cualquier dispositivo con acceso a Internet.
+
+3. **Realizar un commit**
+Un _commit_ es un registro de los cambios realizados en un repositorio. Permite identificar qué modificaciones se han guardado y consultar el historial del proyecto.
+
+**Pasos para realizar un commit desde la página web:**
+
+    1. Abre un repositorio de _GitHub_.
+    2. Crea un archivo nuevo o selecciona uno existente para editarlo.
+    3. Realiza los cambios que necesites.
+    4. Pulsa _Commit changes_.
+    5. Escribe un mensaje breve que explique las modificaciones realizadas.
+    6. Confirma el _commit_ y consulta el historial para comprobar que se ha guardado.
+  
+Es recomendable utilizar mensajes descriptivos, como **"Añadir introducción al proyecto"** o **"Corregir errores en el documento"**, para facilitar la comprensión de los cambios.
+
+![commit](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7INJyk04BBR0HOSNyRhd1KwJ4rrQDmUO6TBkmtCSINw&s=10)
+
+4. **Crear y utilizar ramas (Branches)**
+Una _rama_ es una línea de trabajo independiente que permite modificar un proyecto sin alterar directamente la rama principal. Es especialmente útil cuando varias personas trabajan en el mismo repositorio o cuando se quiere probar una nueva función.
+
+**Pasos para crear una rama:**
+
+    1. Entra en el repositorio.
+    2. Haz clic en el _selector de ramas_, que normalmente muestra el nombre main.
+    3. Escribe el nombre de la _nueva rama_, por ejemplo, mejoras-documentacion.
+    4. Selecciona la opción para crear una _rama_ nueva a partir de la actual.
+    5. Realiza los cambios necesarios en esa _rama_ y guarda las modificaciones mediante _commits_.
+
+De esta forma, podrás trabajar de manera independiente y revisar los cambios antes de incorporarlos a la rama principal.
+
+5. **Crear una Pull Request**
+Una _pull request (PR)_ es una solicitud para revisar e integrar los cambios realizados en una rama dentro de otra. Facilita la colaboración, ya que permite comentar las modificaciones y detectar posibles errores antes de incorporarlas al proyecto.
+
+**Pasos para crear una pull request:**
+
+    1. Crea una _rama_ y realiza los cambios que quieras proponer.
+    2. Guarda los cambios mediante uno o varios _commits_.
+    3. Abre el repositorio y selecciona _Pull requests_.
+    4. Pulsa _New pull request_.
+    5. Selecciona la _rama de origen_, que contiene tus cambios, y la _rama de destino_, donde quieres incorporarlos.
+    6. Pulsa _Create pull request_.
+    7. Añade un título y una descripción que expliquen las modificaciones.
+    8. Envía la solicitud y espera a que se revisen los cambios.
+    9. Si tienes los permisos necesarios y no existen impedimentos, podrás pulsar _Merge pull request_ para integrar los cambios.
+
+Las _pull requests_ permiten revisar el código, debatir propuestas y colaborar de forma organizada.
+
+![PullRequest](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZCzcj4nMesN0IMEVa6pawxQpD8zfIhfbAYRPcKv-Ybw&s=10)
+
+6. ** Gestionar incidencias con GitHub Issues**
+_GitHub Issues_ permite registrar errores, proponer mejoras y organizar tareas relacionadas con un proyecto. Cada incidencia puede incluir una descripción, comentarios, etiquetas y una persona responsable.
+
+**Pasos para crear una incidencia:**
+
+    1. Accede a un repositorio que tenga habilitada la función _Issues_.
+    2. Abre la pestaña _Issues_.
+    3. Pulsa _New issue_.
+    4. Escribe un título descriptivo y explica el problema o la tarea.
+    5. Si están disponibles, añade etiquetas, asigna responsables y establece otros detalles.
+    6. Pulsa _Submit new issue_ para crear la incidencia.
+  
+Esta función ayuda a organizar el trabajo pendiente, realizar un seguimiento de los errores y coordinar las tareas de los colaboradores.
+
+![GitHubIssues](https://www.w3.org/International/i18n-activity/guidelines/images/issue-list.png)
+
+7. **Publicar una página web con GitHub Pages**
+_GitHub Pages_ permite publicar sitios web estáticos directamente desde un repositorio. Puede utilizarse para crear un portafolio personal, una página de documentación o la web de un proyecto.
+
+Pasos para publicar una página:
+
+    1. Crea un repositorio y añade los archivos de la web, como **index.html**, **CSS** e **imágenes**.
+    2. Entra en la sección _Settings_ del repositorio.
+    3. Busca el apartado _Pages_, normalmente dentro de la configuración de compilación y despliegue.
+    4. En _Build and deployment_, selecciona la fuente de publicación disponible, por ejemplo, _Deploy from a branch_.
+    5. Elige la _rama_ y la carpeta desde las que se publicarán los archivos.
+    6. Guarda la configuración.
+    7. Espera a que finalice el proceso de publicación y consulta la dirección web que _GitHub Pages_ proporciona.
+
+La disponibilidad de determinadas opciones puede depender de la configuración del repositorio y del plan de GitHub. _GitHub Pages_ está pensado principalmente para sitios estáticos y no ejecuta directamente aplicaciones de servidor tradicionales.
+
+![GitHubPages](https://digitalhumanities.hkust.edu.hk/wp-content/uploads/2023/10/github-page-setting-1.png)
+
+**_¿Cómo conseguir las Acciones disponibles en GitHub?_** [Volver al índice](#indice)
+Ahora sí una vez explicado y entendido el funcionamiento y los conceptos clave y algunos de los usos más básicos vamos a ver los **pasos a seguir para conseguir estas acciones**: 
 
 1. **Acceder a la sección de Acciones**
    * Entra a tu repositorio de **GitHub**
@@ -86,8 +203,18 @@ Ahora sí una vez explicado y entendido el funcionamiento y los conceptos clave 
 
 En definitiva, GitHub Actions permite **automatizar tareas** como ejecutar pruebas, comprobar la calidad del código, generar compilaciones o desplegar aplicaciones, reduciendo la intervención manual y facilitando la integración continua y la entrega continua (CI/CD).
 
+![GitHubActions](https://www.glukhov.org/developer-tools/ci-cd/github-actions-cheatsheet/github-actions-flow-5-680x496.jpg)
+
 ### **Conclusiones**
 [Volver al índice](#indice)
+
+A lo largo de este informe hemos podido conocer qué es GitHub, cuáles son sus principales usos y cómo esta plataforma facilita el desarrollo y la organización de proyectos. Hemos visto que no se trata únicamente de un lugar donde almacenar archivos en la nube, sino de una herramienta que permite controlar las versiones de un proyecto, colaborar con otras personas y mantener un seguimiento de los cambios realizados.
+
+Además, hemos aprendido cómo funcionan los repositorios, cómo subir archivos y registrar modificaciones mediante commits, así como la utilidad de las ramas (branches) para trabajar de forma independiente sin modificar directamente el proyecto principal. También hemos conocido las pull requests, que permiten proponer y revisar cambios antes de integrarlos, y GitHub Issues, que facilita la organización de tareas, la comunicación entre colaboradores y la detección de errores.
+
+Por otro lado, hemos profundizado en GitHub Actions, una herramienta que permite automatizar tareas como ejecutar pruebas, comprobar el código o desplegar aplicaciones mediante flujos de trabajo configurables. Asimismo, hemos visto cómo GitHub Pages permite publicar páginas web directamente desde un repositorio, lo que resulta útil para crear portafolios personales o documentar proyectos.
+
+En conclusión, GitHub es una plataforma muy completa que ofrece numerosas herramientas para mejorar la organización, la colaboración y la eficiencia en el desarrollo de proyectos. Conocer sus funciones resulta especialmente útil en el ámbito educativo y profesional, ya que permite adquirir hábitos de trabajo ordenados, aprender a colaborar en equipo y familiarizarse con herramientas ampliamente utilizadas en el mundo de la programación. Por todo ello, considero que aprender a utilizar GitHub es una habilidad importante para cualquier persona que quiera iniciarse en el desarrollo de software o mejorar sus conocimientos tecnológicos.
 
 ### **Bibliografía**
 [Volver al índice](#indice)
