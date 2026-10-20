@@ -137,7 +137,7 @@ Es recomendable utilizar mensajes descriptivos, como **"Añadir introducción al
 
 ![commit](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7INJyk04BBR0HOSNyRhd1KwJ4rrQDmUO6TBkmtCSINw&s=10)
 
-#### 4. **Crear y utilizar ramas (Branches)**
+#### 4. **Crear y utilizar ramas**
 [Volver al índice](#indice)
 
 Una _rama_ es una línea de trabajo independiente que permite modificar un proyecto sin alterar directamente la rama principal. Es especialmente útil cuando varias personas trabajan en el mismo repositorio o cuando se quiere probar una nueva función.
