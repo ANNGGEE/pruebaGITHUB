@@ -210,16 +210,22 @@ La disponibilidad de determinadas opciones puede depender de la configuración d
 
 ![GitHubPages](https://digitalhumanities.hkust.edu.hk/wp-content/uploads/2023/10/github-page-setting-1.png)
 
-### **_¿Cómo configurar y utilizar GitHub Actions?_** [Volver al índice](#indice)
+### **_Cómo configurar y utilizar GitHub Actions_** 
+[Volver al índice](#indice)
+
 Una vez explicados los conceptos clave de _GitHub Actions_ y algunas de las _funciones básicas de GitHub_, se presentan los pasos necesarios para configurar y ejecutar un _flujo de trabajo_.
 
 #### 1. **Acceder a la sección de Actions**
+[Volver al índice](#indice)
+
    * Entra a tu repositorio de **GitHub**
    * Haz clic en la pestaña de _Actions_ en el menú superior
    * GitHub puede mostrar sugerencias de plantillas de flujos de trabajo (_workflows_) en función del tipo de proyecto y de los lenguajes utilizados.
    * Elige una plantilla que se adapte a tus necesidades o crea un flujo de trabajo desde cero si ninguna de las opciones disponibles resulta adecuada.
 
 #### 2. **Elegir o crear un flujo de trabajo (_Workflow_)**
+[Volver al índice](#indice)
+
    * **Usar una plantilla**: Selecciona una de las plantillas sugeridas (Node.js, Docker...) y haz clic en **Configure** o Configurar para adaptarla a las necesidades de tu proyecto.
    * **Crear un archivo manual:** Si prefieres crearlo desde cero o el directorio no existe:
      *   Ve a la pestaña principal del repositorio y haz clic en **Add file** y **Create new file**
@@ -228,6 +234,7 @@ Una vez explicados los conceptos clave de _GitHub Actions_ y algunas de las _fun
        > Esta carpeta es importante, ya que GitHub Actions busca en ella los archivos que definen los flujos de trabajo del repositorio.
 
 #### 3. **Definir la estructura YAML del flujo**
+[Volver al índice](#indice)
    
    El archivo YAML contiene las instrucciones que indican cuándo y cómo se ejecutará el flujo de trabajo. Sus elementos principales son:
    * **name:** Establece el nombre visible de tu flujo de trabajo.
