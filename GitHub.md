@@ -2,10 +2,10 @@
 ## Ángela Gómez López
 
 ### INDICE
-* [**Introducción**](#introduccion)
+* [**Introducción**](#introducción)
 * [**¿Qué vamos a ver en este informe?**](#qué-vamos-a-ver-en-este-informe)
 * [**Usos de GitHub**](#usos-de-github)
-    * [**Funciones básicas de GitHub**](#funciones-basicas-de-github)
+    * [**Funciones básicas de GitHub**](#funciones-básicas-de-github)
 * [**Pasos a seguir para conseguir las diferentes acciones**](#pasos-a-seguir-para-conseguir-las-diferentes-acciones)
     * [**Procedimientos paso a paso**](#procedimientos-paso-a-paso)
       * [**Crear un repositorio**](#1-crear-un-repositorio)
@@ -14,16 +14,16 @@
       * [**Crear y utilizar ramas**](#4-crear-y-utilizar-ramas)
       * [**Crear una pull request**](#5-crear-una-pull-request)
       * [**Gestionar incidencias con GitHub Issues**](#6-gestionar-incidencias-con-github-issues)
-      * [**Publicar una página web con GitHub Pages**](#7-publicar-una-pagina-web-con-github-pages)
+      * [**Publicar una página web con GitHub Pages**](#7-publicar-una-página-web-con-github-pages)
     * [**Conceptos clave de GitHub Actions**](#conceptos-clave-de-github-actions)
     * [**Cómo configurar y utilizar GitHub Actions**](#cómo-configurar-y-utilizar-github-actions)
-      * [**Acceder a la sección de Actions**](#1-acceder-a-la-seccion-de-actions)
-      * [**Elegir o crear un workflow**](#2-elegir-o-crear-un-workflow)
-      * [**Definir la estructura YAML**](#3-definir-la-estructura-yaml)
+      * [**Acceder a la sección de Actions**](#1-acceder-a-la-sección-de-actions)
+      * [**Elegir o crear un workflow**](#2-elegir-o-crear-un-flujo-de-trabajo-workflow)
+      * [**Definir la estructura YAML**](#3-definir-la-estructura-yaml-del-flujo)
       * [**Guardar y ejecutar**](#4-guardar-y-ejecutar)
       * [**Añadir acciones externas o personalizadas**](#5-añadir-acciones-externas-o-personalizadas)
 * [**Conclusiones**](#conclusiones)
-* [**Bibliografía**](#bibliografia)
+* [**Bibliografía**](#bibliografía)
 
 ![Imagen GitHub](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEIWBtXQlfZSFnUMVJ98xa2cbwoDF1pvYcKH2eZgsQhQ&s=10)
 
@@ -213,7 +213,7 @@ La disponibilidad de determinadas opciones puede depender de la configuración d
 ### **_¿Cómo configurar y utilizar GitHub Actions?_** [Volver al índice](#indice)
 Una vez explicados los conceptos clave de _GitHub Actions_ y algunas de las _funciones básicas de GitHub_, se presentan los pasos necesarios para configurar y ejecutar un _flujo de trabajo_.
 
-#### 1. **Acceder a la sección de Acciones**
+#### 1. **Acceder a la sección de Actions**
    * Entra a tu repositorio de **GitHub**
    * Haz clic en la pestaña de _Actions_ en el menú superior
    * GitHub puede mostrar sugerencias de plantillas de flujos de trabajo (_workflows_) en función del tipo de proyecto y de los lenguajes utilizados.
