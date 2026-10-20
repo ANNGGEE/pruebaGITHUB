@@ -50,6 +50,8 @@ En este informe se presentan los principales usos de GitHub y se explican, paso 
 * **Herramientas avanzadas:** Incluye funciones de automatización, gestión de tareas e inteligencia artificial, como puede ser GitHub Copilot.
 
 ### Funciones básicas de GitHub
+[Volver al índice](#indice)
+
 Además de los usos mencionados anteriormente, GitHub permite realizar diferentes acciones para gestionar y desarrollar proyectos. Entre las más importantes se encuentran:
 
  * Crear repositorios: organizar y almacenar los archivos de un proyecto.
@@ -83,9 +85,12 @@ Esta herramienta resulta especialmente útil para la integración y entrega cont
 
 ### **Procedimientos paso a paso** 
 [Volver al índice](#indice)
+
 A continuación, se explican algunas de las **funciones básicas de GitHub**, necesarias para comprender mejor el funcionamiento de _GitHub Actions_.
 
 #### 1. **Crear un repositorio**
+[Volver al índice](#indice)
+
 Un _repositorio_ es un espacio donde se almacenan los archivos de un proyecto y su historial de modificaciones. Puede ser **público**, para que cualquier persona pueda verlo, o **privado**, para limitar su acceso a los usuarios autorizados.
 
 **Pasos para crear un repositorio:**
@@ -100,6 +105,8 @@ Un _repositorio_ es un espacio donde se almacenan los archivos de un proyecto y 
 Una vez creado, podrás añadir archivos, organizar el proyecto y colaborar con otros usuarios.
 
 #### 2. **Subir archivos a un repositorio**
+[Volver al índice](#indice)
+
 GitHub permite almacenar archivos de diferentes tipos, como documentos MarkDown, imágenes, archivos de código o configuraciones.
 
 **Pasos para subir un archivo desde la página web:**
@@ -113,6 +120,8 @@ GitHub permite almacenar archivos de diferentes tipos, como documentos MarkDown,
 Los archivos quedarán almacenados en el repositorio y podrás consultarlos desde cualquier dispositivo con acceso a Internet.
 
 #### 3. **Realizar un commit**
+[Volver al índice](#indice)
+
 Un _commit_ es un registro de los cambios realizados en un repositorio. Permite identificar qué modificaciones se han guardado y consultar el historial del proyecto.
 
 **Pasos para realizar un commit desde la página web:**
@@ -129,6 +138,8 @@ Es recomendable utilizar mensajes descriptivos, como **"Añadir introducción al
 ![commit](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7INJyk04BBR0HOSNyRhd1KwJ4rrQDmUO6TBkmtCSINw&s=10)
 
 #### 4. **Crear y utilizar ramas (Branches)**
+[Volver al índice](#indice)
+
 Una _rama_ es una línea de trabajo independiente que permite modificar un proyecto sin alterar directamente la rama principal. Es especialmente útil cuando varias personas trabajan en el mismo repositorio o cuando se quiere probar una nueva función.
 
 **Pasos para crear una rama:**
@@ -142,6 +153,8 @@ Una _rama_ es una línea de trabajo independiente que permite modificar un proye
 De esta forma, podrás trabajar de manera independiente y revisar los cambios antes de incorporarlos a la rama principal.
 
 #### 5. **Crear una Pull Request**
+[Volver al índice](#indice)
+
 Una _pull request (PR)_ es una solicitud para revisar e integrar los cambios realizados en una rama dentro de otra. Facilita la colaboración, ya que permite comentar las modificaciones y detectar posibles errores antes de incorporarlas al proyecto.
 
 **Pasos para crear una pull request:**
@@ -161,6 +174,8 @@ Las _pull requests_ permiten revisar el código, debatir propuestas y colaborar 
 ![PullRequest](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZCzcj4nMesN0IMEVa6pawxQpD8zfIhfbAYRPcKv-Ybw&s=10)
 
 #### 6. **Gestionar incidencias con GitHub Issues**
+[Volver al índice](#indice)
+
 _GitHub Issues_ permite registrar errores, proponer mejoras y organizar tareas relacionadas con un proyecto. Cada incidencia puede incluir una descripción, comentarios, etiquetas y una persona responsable.
 
 **Pasos para crear una incidencia:**
@@ -177,6 +192,8 @@ Esta función ayuda a organizar el trabajo pendiente, realizar un seguimiento de
 ![GitHubIssues](https://www.w3.org/International/i18n-activity/guidelines/images/issue-list.png)
 
 #### 7. **Publicar una página web con GitHub Pages**
+[Volver al índice](#indice)
+
 _GitHub Pages_ permite publicar sitios web estáticos directamente desde un repositorio. Puede utilizarse para crear un portafolio personal, una página de documentación o la web de un proyecto.
 
 Pasos para publicar una página:
@@ -259,11 +276,15 @@ Este archivo debe guardarse dentro de la ruta _.github/workflows/_, por ejemplo,
 ![workflow](https://user-images.githubusercontent.com/12570515/262074692-01e51004-343b-43dc-9f54-4662a69d7384.png)
 
 #### 4. **Guardar y ejecutar**
+[Volver al índice](#indice)
+
    * Una vez terminado el archivo, pulsa **Commit changes...** para guardar los cambios en el repositorio.
    * Si el archivo se incorpora a una rama y se produce uno de los eventos definidos en el YAML, _GitHub Actions_ activará el flujo de forma automática según el evento configurado (por ejemplo, al hacer un _push_).
    * Puedes volver a la pestaña **Actions** para monitorizar en tiempo real el progreso de cada paso y ver los registros (_logs_) de salida.
   
 #### 5. **Añadir acciones externas o personalizadas**
+[Volver al índice](#indice)
+
   * **Buscar una acción:** accede a GitHub Marketplace para encontrar acciones creadas por GitHub, empresas u otros desarrolladores que permitan realizar tareas específicas dentro de un flujo de trabajo.
   * **Integrar la acción:** añade la instrucción _uses: nombre-del-proyecto/nombre-de-la-acción@versión_ dentro de uno de los pasos (_steps_) del archivo _YAML_. Por ejemplo, _uses: actions/checkout@v4_ permite obtener el código del repositorio para que los siguientes pasos puedan trabajar con él.
   * **Revisar su fiabilidad:** antes de utilizar una acción externa, es recomendable comprobar quién la mantiene, su documentación, su actividad y los permisos que necesita. También conviene seleccionar una versión adecuada y mantenerla actualizada para reducir posibles riesgos de seguridad.
