@@ -218,3 +218,12 @@ En conclusión, GitHub es una plataforma muy completa que ofrece numerosas herra
 
 ### **Bibliografía**
 [Volver al índice](#indice)
+
+* [enlace1](https://docs.github.com/es/get-started/start-your-journey/what-is-github)
+* [enlace2](https://github.com/features/actions)
+* [enlace3](https://docs.github.com/actions)
+* [enlace4](https://github.com/features/issues)
+* [enlace5](https://docs.github.com/articles/creating-project-pages-manually)
+* [enlace6](https://docs.github.com/es/actions/get-started/understand-github-actions)
+* [enlace7](https://docs.github.com/es/actions/get-started/quickstart)
+
