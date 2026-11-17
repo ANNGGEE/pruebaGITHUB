@@ -68,3 +68,21 @@ Finalmente, la máquina virtual arranca desde el disco duro virtual, cargando la
 <img width="653" height="352" alt="Captura11" src="https://github.com/user-attachments/assets/2b95a13b-041e-436b-9a12-68142502cf5b" />
 
 <img width="656" height="345" alt="Captura12" src="https://github.com/user-attachments/assets/3b8bbe86-3bf9-4fe4-a9d0-6f445c9adffb" />
+
+**Configuración inicial de Ubuntu**
+Una vez finalizada la instalación del sistema operativo y reiniciada la máquina virtual, se inicia Ubuntu desde el disco duro virtual.
+Durante el primer arranque aparece un asistente de bienvenida que permite completar la configuración inicial del sistema. Entre sus opciones se encuentra la configuración de determinados servicios y preferencias, así como la posibilidad de activar Ubuntu Pro.
+
+En este caso, se ha decidido omitir la activación de Ubuntu Pro, ya que no es necesaria para el funcionamiento básico del sistema operativo ni para el desarrollo de la práctica.
+
+Una vez completados estos pasos, Ubuntu queda preparado para su utilización.
+
+<img width="658" height="347" alt="Captura13" src="https://github.com/user-attachments/assets/fde2c54a-5e65-4049-bbaf-39f58dfbc133" />
+
+<img width="651" height="348" alt="Captura14" src="https://github.com/user-attachments/assets/9c52cf57-3730-41e5-ae6c-b078da0b0998" />
+
+<img width="652" height="345" alt="Captura15" src="https://github.com/user-attachments/assets/5d528aa6-e7c5-4c37-86b7-625041381db7" />
+
+<img width="652" height="349" alt="Captura16" src="https://github.com/user-attachments/assets/d0d3bcbb-75c1-4ac3-b71c-5a6cedc9a49a" />
+
+<img width="650" height="348" alt="Captura17" src="https://github.com/user-attachments/assets/13c20258-4f92-4a05-8135-e5330c54beb3" />
