@@ -270,8 +270,34 @@ Si el proceso se realiza correctamente, aparece el mensaje «Hello from Docker!�
 
 La aparición de este mensaje confirma que el cliente de Docker ha conseguido comunicarse con el motor, descargar la imagen y crear y ejecutar un contenedor correctamente.
 
+
+
 Por tanto, se ha completado la instalación y comprobación básica de Docker en Ubuntu, dejando preparado el entorno para trabajar con contenedores y realizar las siguientes actividades de la práctica.
 
 Instalación de Docker Desktop en Ubuntu
 Actualiza los repositorios:
 | sudo apt update && sudo apt upgrade -y
+
+
+<img width="599" height="314" alt="Captura26" src="https://github.com/user-attachments/assets/410721ca-f2fc-4b47-951e-c277b3170665" />
+
+Instala dependencias:
+| sudo apt install ca-certificates curl gnupg -y
+
+
+<img width="651" height="351" alt="Captura27" src="https://github.com/user-attachments/assets/91be60ff-a541-40bb-84f8-5890ededadbf" />
+
+<img width="660" height="350" alt="Captura28" src="https://github.com/user-attachments/assets/16d0fb02-e710-47ad-aac0-671d7e644b81" />
+
+<img width="654" height="342" alt="Captura29" src="https://github.com/user-attachments/assets/51beb688-ee52-434e-9529-5d322958baff" />
+
+<img width="658" height="115" alt="Captura30" src="https://github.com/user-attachments/assets/305a9464-9640-45f6-93ee-754f5d0675c1" />
+
+Se ha instalado el ./docker-desktop-amd64.deb de la página oficial de docker desktop en Ubuntu.
+
+<img width="654" height="353" alt="Captura31" src="https://github.com/user-attachments/assets/1578dd7b-ae00-42d3-987b-c2ee6ace23d3" />
+
+<img width="655" height="265" alt="Captura32" src="https://github.com/user-attachments/assets/2c644ccb-ad18-460b-9e30-ad73d11278e2" />
+
+<img width="649" height="342" alt="Captura33" src="https://github.com/user-attachments/assets/cb09e6a4-bab4-4f9f-a3b7-bbb05a95516a" />
+
