@@ -87,3 +87,84 @@ Una vez completados estos pasos, Ubuntu queda preparado para su utilización.
 <img width="652" height="349" alt="Captura16" src="https://github.com/user-attachments/assets/d0d3bcbb-75c1-4ac3-b71c-5a6cedc9a49a" />
 
 <img width="650" height="348" alt="Captura17" src="https://github.com/user-attachments/assets/13c20258-4f92-4a05-8135-e5330c54beb3" />
+
+**Instalación y comprobación de las Guest Additions**
+Una vez instalado Ubuntu en la máquina virtual, se ha procedido a instalar las Guest Additions (complementos del invitado) de VirtualBox. Estas herramientas permiten mejorar la integración entre el sistema operativo anfitrión y la máquina virtual, proporcionando funcionalidades como el ajuste automático de la resolución de pantalla.
+
+**Procedimiento de instalación**
+Para realizar la instalación, se han seguido los siguientes pasos:
+
+1. Con la máquina virtual de Ubuntu iniciada, se ha accedido al menú Dispositivos de VirtualBox.
+2. Se ha seleccionado la opción Insertar imagen de CD de los complementos del invitado....
+3. Una vez insertada la imagen, ha aparecido una unidad de CD en el menú lateral de Ubuntu con el nombre VBox_GAs.
+4. Se ha accedido a dicha unidad y se ha abierto una terminal desde esa ubicación.
+
+Desde la terminal se ha ejecutado el siguiente comando para iniciar la instalación:
+
+bash
+| sudo ./VBoxLinuxAdditions.run
+
+5. Este comando ejecuta el instalador de las Guest Additions con permisos de administrador, instalando los componentes necesarios para mejorar la comunicación entre Ubuntu y VirtualBox.
+   
+Una vez finalizado el proceso, se ha reiniciado la máquina virtual mediante el siguiente comando:
+
+bash
+sudo reboot
+
+6. Este reinicio permite que los nuevos componentes y controladores instalados se carguen correctamente.
+   
+**Comprobación de la instalación**
+
+Tras reiniciar la máquina virtual, se ha comprobado que las Guest Additions se encuentran funcionando mediante el siguiente comando:
+
+bash
+| lsmod | grep vboxguest
+
+Este comando permite consultar los módulos del núcleo de Linux que están cargados y filtrar los resultados para localizar vboxguest, que es uno de los módulos principales de VirtualBox.
+
+Al aparecer dicho módulo en el resultado, se confirma que está cargado correctamente en el sistema.
+
+**Resultados obtenidos y adaptación de la pantalla**
+
+Una vez instaladas las Guest Additions, se ha comprobado que la integración entre Ubuntu y VirtualBox ha mejorado, especialmente en lo relacionado con la adaptación automática de la resolución de pantalla.
+
+Antes de realizar la instalación, la máquina virtual no ajustaba correctamente el tamaño del escritorio al modificar las dimensiones de su ventana. Por ejemplo, al colocar la máquina virtual ocupando solamente la mitad de la pantalla o al utilizar una configuración de doble pantalla, la resolución no se adaptaba correctamente.
+
+Además, al volver a ampliar la ventana después de utilizar la máquina virtual en una configuración de doble pantalla, el escritorio permanecía con el tamaño anterior. En algunas ocasiones, incluso era necesario reiniciar la máquina virtual para recuperar la visualización correcta.
+
+Después de instalar las Guest Additions, este comportamiento ha mejorado considerablemente:
+
+* Ventana en tamaño reducido: al colocar la máquina virtual ocupando la mitad de la pantalla, Ubuntu adapta automáticamente su resolución al nuevo espacio disponible.
+* Pantalla completa: al ampliar la ventana, el escritorio se ajusta automáticamente al tamaño de la pantalla.
+* Configuración de doble pantalla: la máquina virtual adapta su visualización al cambiar entre las diferentes pantallas.
+* Restauración del tamaño: al volver a ampliar la ventana después de utilizarla en modo reducido o en doble pantalla, el escritorio recupera automáticamente su tamaño adecuado, sin necesidad de reiniciar la máquina virtual.
+
+Por tanto, se ha comprobado que las Guest Additions no solo se han instalado correctamente, sino que también mejoran notablemente la integración y la experiencia de uso de Ubuntu dentro de VirtualBox.
+
+<img width="715" height="382" alt="Captura18" src="https://github.com/user-attachments/assets/b6e81c59-347a-49e2-bb35-ca5ae9e2e67e" />
+
+<img width="719" height="382" alt="Captura19" src="https://github.com/user-attachments/assets/6288ce68-4f5c-40b4-bc10-36e2aa744ed9" />
+
+<img width="716" height="382" alt="Captura20" src="https://github.com/user-attachments/assets/37edecf2-9c51-4ed5-8fb9-6d874c1b2cd5" />
+
+<img width="717" height="380" alt="Captura21" src="https://github.com/user-attachments/assets/11f48431-a625-4363-b105-9ab778c26911" />
+
+Se le pone en la terminal el comando **“sudo reboot"**
+
+Pantalla una vez instalado: 
+
+<img width="715" height="397" alt="Captura22" src="https://github.com/user-attachments/assets/21b69aba-a570-4482-8034-fc40d37c9bdd" />
+
+CÓMO SABER SI ESTÁN INSTALADAS LAS GUEST ADDITION: 
+
+<img width="717" height="161" alt="Captura23" src="https://github.com/user-attachments/assets/2902ca2f-e2b6-4a56-a0fd-3e0ac792956e" />
+
+Para demostrar estas mejoras, se incluyen capturas de pantalla del funcionamiento de la máquina virtual antes y después de instalar las Guest Additions, en las que se puede observar la diferencia en la adaptación de la resolución al modificar el tamaño de la ventana y utilizar diferentes configuraciones de pantalla.
+
+Antes de instalar las Guest Additions, al utilizar la máquina virtual en una configuración de doble pantalla y volver posteriormente al modo de pantalla completa, la resolución no se reajustaba correctamente y la ventana de Ubuntu permanecía con el tamaño anterior, tal y como se muestra en la siguiente captura: 
+
+<img width="655" height="345" alt="Captura24" src="https://github.com/user-attachments/assets/b8be1986-a0c5-4b67-a5cc-12061524fd21" />
+
+Vemos como se acomoda mejor la pantalla ahora en doble pantalla.
+
+<img width="299" height="337" alt="Captura25" src="https://github.com/user-attachments/assets/c83c0043-20f6-4d5f-8865-6f778c5f369b" />
