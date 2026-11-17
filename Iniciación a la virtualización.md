@@ -168,3 +168,110 @@ Antes de instalar las Guest Additions, al utilizar la máquina virtual en una co
 Vemos como se acomoda mejor la pantalla ahora en doble pantalla.
 
 <img width="299" height="337" alt="Captura25" src="https://github.com/user-attachments/assets/c83c0043-20f6-4d5f-8865-6f778c5f369b" />
+
+**Instalación de Docker en Ubuntu**
+Teoría básica sobre contenedores:
+
+Un contenedor es una unidad de software que empaqueta código, dependencias y
+configuraciones necesarias para ejecutar una aplicación. A diferencia de una máquina
+virtual, los contenedores comparten el kernel del sistema operativo, lo que los hace más
+ligeros y rápidos.
+
+Ventajas de Docker:
+* Portabilidad
+* Aislamiento
+* Escalabilidad
+* Rapidez de despliegue
+
+**Instalación de Docker en Ubuntu**
+
+Teoría básica sobre contenedores
+
+Antes de comenzar con la instalación, es importante conocer qué son los contenedores y cuál es la utilidad de Docker.
+Un contenedor es una unidad de software que incluye el código de una aplicación junto con las dependencias, bibliotecas y configuraciones necesarias para que pueda ejecutarse correctamente.
+
+A diferencia de una máquina virtual, los contenedores no necesitan disponer de un sistema operativo completo e independiente, ya que comparten el kernel (núcleo) del sistema operativo anfitrión. Esto permite que sean más ligeros, rápidos y eficientes en cuanto al consumo de recursos.
+
+Docker es una plataforma que permite crear, ejecutar y gestionar contenedores, facilitando el desarrollo y despliegue de aplicaciones en diferentes entornos.
+
+Entre las principales ventajas que ofrece Docker destacan las siguientes:
+* Portabilidad: permite ejecutar aplicaciones en diferentes sistemas y entornos manteniendo sus dependencias y configuraciones.
+* Aislamiento: cada contenedor funciona en un entorno aislado, permitiendo separar las aplicaciones y sus procesos.
+* Escalabilidad: facilita aumentar o reducir el número de contenedores según las necesidades de la aplicación.
+* Rapidez de despliegue: permite crear y ejecutar aplicaciones rápidamente, sin necesidad de configurar un sistema operativo completo para cada una.
+
+**Instalación de Docker Desktop en Ubuntu**
+En primer lugar, se ha preparado el sistema operativo para realizar la instalación de Docker. Para ello, se han actualizado los repositorios y los paquetes de Ubuntu mediante el siguiente comando:
+
+bash
+| sudo apt update && sudo apt upgrade -y
+
+El comando sudo apt update actualiza la información de los repositorios, mientras que sudo apt upgrade -y instala las actualizaciones disponibles para los paquetes del sistema.
+
+A continuación, se han instalado las dependencias necesarias para realizar la descarga y posterior instalación de Docker:
+
+bash
+| sudo apt install ca-certificates curl gnupg -y
+
+Estos paquetes proporcionan herramientas para verificar certificados de seguridad, descargar archivos desde Internet y gestionar claves criptográficas.
+
+Una vez preparadas las dependencias, se ha comenzado con la instalación de Docker Engine. Inicialmente, se ha intentado realizar mediante el siguiente comando:
+
+bash
+| curl -fsSL https://get.docker.com | sudo sh
+
+Sin embargo, al no completarse correctamente la instalación mediante este procedimiento, se ha optado por descargar primero el script de instalación y ejecutarlo posteriormente en un segundo paso.
+
+Para descargarlo, se ha utilizado:
+
+bash
+| curl -fsSL https://get.docker.com -o get-docker.sh
+
+Este comando obtiene el script oficial de instalación de Docker y lo guarda en un archivo llamado get-docker.sh.
+Una vez descargado, se ha ejecutado mediante:
+
+bash
+| sudo sh get-docker.sh
+
+De esta manera, se ha realizado la instalación de Docker Engine, que es el componente encargado de crear, ejecutar y gestionar los contenedores.
+
+Tras finalizar la instalación, se ha comprobado que Docker se encontraba disponible en el sistema mediante:
+
+bash
+| docker --version
+
+Este comando muestra la versión del cliente de Docker instalada en Ubuntu, permitiendo comprobar que está disponible desde la terminal.
+Posteriormente, se ha procedido a descargar Docker Desktop desde la página oficial de Docker. Para ello, se ha obtenido el paquete de instalación correspondiente a Ubuntu, denominado docker-desktop-amd64.deb, que se ha guardado en la carpeta Descargas.
+
+Una vez descargado, se ha accedido a dicha carpeta desde la terminal y se ha utilizado el comando:
+
+bash
+| ls
+
+Este comando muestra los archivos y directorios presentes en la ubicación actual, permitiendo comprobar que el paquete docker-desktop-amd64.deb se encuentra correctamente descargado.
+
+Después de verificar su presencia, se ha procedido a instalar Docker Desktop mediante:
+
+bash
+| sudo apt install ./docker-desktop-amd64.deb
+
+Este comando utiliza el gestor de paquetes de Ubuntu para instalar el archivo descargado y gestionar las dependencias necesarias para completar la instalación.
+
+Finalmente, una vez instalado Docker, se ha realizado una prueba para comprobar que el motor funciona correctamente y que es capaz de ejecutar contenedores. Para ello, se ha utilizado el siguiente comando:
+
+bash
+| sudo docker run hello-world
+
+Este comando solicita a Docker que ejecute un contenedor a partir de la imagen hello-world, utilizada habitualmente para comprobar el correcto funcionamiento de una instalación de Docker.
+
+Al ejecutar el comando, Docker comprueba si la imagen se encuentra disponible localmente. Si no está descargada, la obtiene automáticamente desde Docker Hub. Posteriormente, crea y ejecuta un contenedor a partir de dicha imagen.
+
+Si el proceso se realiza correctamente, aparece el mensaje «Hello from Docker!», acompañado de una explicación de las operaciones realizadas.
+
+La aparición de este mensaje confirma que el cliente de Docker ha conseguido comunicarse con el motor, descargar la imagen y crear y ejecutar un contenedor correctamente.
+
+Por tanto, se ha completado la instalación y comprobación básica de Docker en Ubuntu, dejando preparado el entorno para trabajar con contenedores y realizar las siguientes actividades de la práctica.
+
+Instalación de Docker Desktop en Ubuntu
+Actualiza los repositorios:
+| sudo apt update && sudo apt upgrade -y
