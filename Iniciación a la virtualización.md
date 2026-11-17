@@ -102,14 +102,14 @@ Para realizar la instalación, se han seguido los siguientes pasos:
 Desde la terminal se ha ejecutado el siguiente comando para iniciar la instalación:
 
 bash
-| sudo ./VBoxLinuxAdditions.run
+> sudo ./VBoxLinuxAdditions.run
 
 5. Este comando ejecuta el instalador de las Guest Additions con permisos de administrador, instalando los componentes necesarios para mejorar la comunicación entre Ubuntu y VirtualBox.
    
 Una vez finalizado el proceso, se ha reiniciado la máquina virtual mediante el siguiente comando:
 
 bash
-sudo reboot
+> sudo reboot
 
 6. Este reinicio permite que los nuevos componentes y controladores instalados se carguen correctamente.
    
@@ -118,7 +118,7 @@ sudo reboot
 Tras reiniciar la máquina virtual, se ha comprobado que las Guest Additions se encuentran funcionando mediante el siguiente comando:
 
 bash
-| lsmod | grep vboxguest
+> lsmod | grep vboxguest
 
 Este comando permite consultar los módulos del núcleo de Linux que están cargados y filtrar los resultados para localizar vboxguest, que es uno de los módulos principales de VirtualBox.
 
@@ -204,41 +204,41 @@ Entre las principales ventajas que ofrece Docker destacan las siguientes:
 En primer lugar, se ha preparado el sistema operativo para realizar la instalación de Docker. Para ello, se han actualizado los repositorios y los paquetes de Ubuntu mediante el siguiente comando:
 
 bash
-| sudo apt update && sudo apt upgrade -y
+> sudo apt update && sudo apt upgrade -y
 
 El comando sudo apt update actualiza la información de los repositorios, mientras que sudo apt upgrade -y instala las actualizaciones disponibles para los paquetes del sistema.
 
 A continuación, se han instalado las dependencias necesarias para realizar la descarga y posterior instalación de Docker:
 
 bash
-| sudo apt install ca-certificates curl gnupg -y
+> sudo apt install ca-certificates curl gnupg -y
 
 Estos paquetes proporcionan herramientas para verificar certificados de seguridad, descargar archivos desde Internet y gestionar claves criptográficas.
 
 Una vez preparadas las dependencias, se ha comenzado con la instalación de Docker Engine. Inicialmente, se ha intentado realizar mediante el siguiente comando:
 
 bash
-| curl -fsSL https://get.docker.com | sudo sh
+> curl -fsSL https://get.docker.com | sudo sh
 
 Sin embargo, al no completarse correctamente la instalación mediante este procedimiento, se ha optado por descargar primero el script de instalación y ejecutarlo posteriormente en un segundo paso.
 
 Para descargarlo, se ha utilizado:
 
 bash
-| curl -fsSL https://get.docker.com -o get-docker.sh
+> curl -fsSL https://get.docker.com -o get-docker.sh
 
 Este comando obtiene el script oficial de instalación de Docker y lo guarda en un archivo llamado get-docker.sh.
 Una vez descargado, se ha ejecutado mediante:
 
 bash
-| sudo sh get-docker.sh
+> sudo sh get-docker.sh
 
 De esta manera, se ha realizado la instalación de Docker Engine, que es el componente encargado de crear, ejecutar y gestionar los contenedores.
 
 Tras finalizar la instalación, se ha comprobado que Docker se encontraba disponible en el sistema mediante:
 
 bash
-| docker --version
+> docker --version
 
 Este comando muestra la versión del cliente de Docker instalada en Ubuntu, permitiendo comprobar que está disponible desde la terminal.
 Posteriormente, se ha procedido a descargar Docker Desktop desde la página oficial de Docker. Para ello, se ha obtenido el paquete de instalación correspondiente a Ubuntu, denominado docker-desktop-amd64.deb, que se ha guardado en la carpeta Descargas.
@@ -246,21 +246,21 @@ Posteriormente, se ha procedido a descargar Docker Desktop desde la página ofic
 Una vez descargado, se ha accedido a dicha carpeta desde la terminal y se ha utilizado el comando:
 
 bash
-| ls
+> ls
 
 Este comando muestra los archivos y directorios presentes en la ubicación actual, permitiendo comprobar que el paquete docker-desktop-amd64.deb se encuentra correctamente descargado.
 
 Después de verificar su presencia, se ha procedido a instalar Docker Desktop mediante:
 
 bash
-| sudo apt install ./docker-desktop-amd64.deb
+> sudo apt install ./docker-desktop-amd64.deb
 
 Este comando utiliza el gestor de paquetes de Ubuntu para instalar el archivo descargado y gestionar las dependencias necesarias para completar la instalación.
 
 Finalmente, una vez instalado Docker, se ha realizado una prueba para comprobar que el motor funciona correctamente y que es capaz de ejecutar contenedores. Para ello, se ha utilizado el siguiente comando:
 
 bash
-| sudo docker run hello-world
+> sudo docker run hello-world
 
 Este comando solicita a Docker que ejecute un contenedor a partir de la imagen hello-world, utilizada habitualmente para comprobar el correcto funcionamiento de una instalación de Docker.
 
@@ -270,19 +270,17 @@ Si el proceso se realiza correctamente, aparece el mensaje «Hello from Docker!�
 
 La aparición de este mensaje confirma que el cliente de Docker ha conseguido comunicarse con el motor, descargar la imagen y crear y ejecutar un contenedor correctamente.
 
-
-
 Por tanto, se ha completado la instalación y comprobación básica de Docker en Ubuntu, dejando preparado el entorno para trabajar con contenedores y realizar las siguientes actividades de la práctica.
 
 Instalación de Docker Desktop en Ubuntu
 Actualiza los repositorios:
-| sudo apt update && sudo apt upgrade -y
+> sudo apt update && sudo apt upgrade -y
 
 
 <img width="599" height="314" alt="Captura26" src="https://github.com/user-attachments/assets/410721ca-f2fc-4b47-951e-c277b3170665" />
 
 Instala dependencias:
-| sudo apt install ca-certificates curl gnupg -y
+> sudo apt install ca-certificates curl gnupg -y
 
 
 <img width="651" height="351" alt="Captura27" src="https://github.com/user-attachments/assets/91be60ff-a541-40bb-84f8-5890ededadbf" />
@@ -301,3 +299,83 @@ Se ha instalado el ./docker-desktop-amd64.deb de la página oficial de docker de
 
 <img width="649" height="342" alt="Captura33" src="https://github.com/user-attachments/assets/cb09e6a4-bab4-4f9f-a3b7-bbb05a95516a" />
 
+**Instalación de contenedores de servidor web y de aplicaciones**
+* Servidor web: Atiende peticiones HTTP/HTTPS (ej. Nginx, Apache). 
+* Servidor de aplicaciones:
+
+Ejecuta la lógica de negocio (ej. Tomcat, WildFly). 
+
+Instalación en Docker Buscar imágenes disponibles: 
+* docker search nginx 
+* docker search tomcat 
+
+Descargar e iniciar contenedores:
+* docker run -d -p 8080:80 --name webserver nginx 
+* docker run -d -p 8081:8080 --name appserver tomcat 
+
+Verificar contenedores activos: 
+* docker ps
+
+Abrir en el navegador: 
+* http://localhost:8080 → Nginx 
+* http://localhost:8081 → Tomcat 
+
+Prueba ambos servidores desde tu navegador y toma capturas de pantalla del resultado. 
+
+**Instalación de contenedores de servidor web y de aplicaciones**
+Teoría básica: servidores web y servidores de aplicaciones
+
+Antes de comenzar con la instalación de los contenedores, es importante conocer la diferencia entre un servidor web y un servidor de aplicaciones.
+
+Un servidor web es un software encargado de recibir y atender peticiones HTTP/HTTPS realizadas por los usuarios a través de un navegador. 
+
+Su función principal es proporcionar contenido web, como páginas HTML, imágenes y otros recursos. Algunos ejemplos son Nginx y Apache.
+
+Un servidor de aplicaciones es un software que permite ejecutar aplicaciones y gestionar su lógica de negocio, procesando las peticiones recibidas y proporcionando las respuestas correspondientes. Un ejemplo es Apache Tomcat, que permite ejecutar aplicaciones web desarrolladas en Java.
+
+En esta práctica se van a utilizar dos herramientas:
+* Nginx: se utilizará como servidor web para atender las peticiones realizadas desde el navegador.
+* Apache Tomcat: se utilizará como servidor de aplicaciones para ejecutar una aplicación web.
+
+**Instalación y configuración de los contenedores en Docker**
+En primer lugar, se han buscado las imágenes de Nginx y Tomcat disponibles en Docker Hub, que es el repositorio desde el que Docker permite obtener imágenes para crear contenedores.
+
+Para buscar la imagen de Nginx se ha utilizado el siguiente comando:
+
+bash
+> sudo docker search nginx
+
+Este comando muestra diferentes imágenes relacionadas con Nginx disponibles en Docker Hub, proporcionando información sobre ellas, como su nombre, descripción y popularidad.
+
+A continuación, se ha realizado la misma búsqueda para Tomcat mediante:
+
+bash
+> sudo docker search tomcat
+
+De esta manera, se han localizado las imágenes necesarias para crear los dos contenedores que se utilizarán en la práctica.
+Una vez realizadas las búsquedas, se ha procedido a crear e iniciar el contenedor correspondiente al servidor web Nginx mediante el siguiente comando:
+
+bash
+> sudo docker run -d -p 8080:80 --name webserver nginx
+
+Este comando realiza varias operaciones:
+docker run: crea y ejecuta un nuevo contenedor.
+
+* -d: ejecuta el contenedor en segundo plano, sin mantener la terminal ocupada.
+* -p 8080:80: establece la comunicación entre el puerto 8080 de Ubuntu y el puerto 80 del contenedor, que es el utilizado por Nginx para atender las peticiones HTTP.
+* --name webserver: asigna al contenedor el nombre webserver.
+* nginx: indica la imagen utilizada para crear el contenedor.
+
+De esta forma, se crea el contenedor que ejecutará el servidor web Nginx.
+Posteriormente, se ha creado el contenedor correspondiente al servidor de aplicaciones Tomcat utilizando:
+
+bash
+> sudo docker run -d -p 8081:8080 --name appserver tomcat
+
+En este caso, el funcionamiento es similar al anterior, pero se utilizan otros puertos y un nombre diferente:
+* -d: permite ejecutar el contenedor en segundo plano.
+* -p 8081:8080: conecta el puerto 8081 de Ubuntu con el puerto 8080 del contenedor, que es el utilizado por Tomcat para atender las peticiones.
+* --name appserver: asigna el nombre appserver al contenedor.
+* tomcat: indica la imagen utilizada para crear el contenedor.
+
+De esta manera, se dispone de dos contenedores independientes: uno destinado a ejecutar Nginx y otro destinado a ejecutar Tomcat.
