@@ -51,3 +51,20 @@ UNA VEZ INSTALADO:
 
 <img width="651" height="364" alt="Captura9" src="https://github.com/user-attachments/assets/d2970bfb-ade6-4a08-a9bf-227876c4190a" />
 
+Una vez encendida la máquina de Ubuntu por primera vez nos aparecerá esta pestaña que nos dice “Install Ubuntu”, pulsaremos y esperaremos para más tarde reiniciar la máquina. 
+
+Al iniciar por primera vez la máquina virtual, se muestra el instalador de Ubuntu, que se ejecuta desde la imagen ISO previamente asociada a la máquina virtual.
+
+Este instalador permite realizar la instalación del sistema operativo en el disco duro virtual. Durante el proceso se configuran aspectos como el idioma, la distribución del teclado, la zona horaria, las particiones del disco y las credenciales del usuario.
+
+Una vez confirmadas las opciones de instalación, el sistema copia los archivos necesarios, instala los componentes fundamentales de Ubuntu y configura el gestor de arranque para permitir que el sistema operativo pueda iniciarse desde el disco virtual.
+
+Cuando finaliza la instalación, aparece un mensaje indicando que es necesario reiniciar la máquina. Este reinicio debe iniciarse manualmente mediante la opción "Reiniciar ahora". Si es necesario, se debe retirar o desconectar la imagen ISO para evitar que la máquina vuelva a iniciar el instalador.
+
+Finalmente, la máquina virtual arranca desde el disco duro virtual, cargando la instalación de Ubuntu realizada y mostrando la pantalla de inicio de sesión.
+
+<img width="649" height="351" alt="Captura10" src="https://github.com/user-attachments/assets/ba3e4aad-2234-4816-9854-6d8ea325b80b" />
+
+<img width="653" height="352" alt="Captura11" src="https://github.com/user-attachments/assets/2b95a13b-041e-436b-9a12-68142502cf5b" />
+
+<img width="656" height="345" alt="Captura12" src="https://github.com/user-attachments/assets/3b8bbe86-3bf9-4fe4-a9d0-6f445c9adffb" />
