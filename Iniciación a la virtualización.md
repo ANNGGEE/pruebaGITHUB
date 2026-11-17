@@ -361,10 +361,10 @@ bash
 Este comando realiza varias operaciones:
 docker run: crea y ejecuta un nuevo contenedor.
 
-* -d: ejecuta el contenedor en segundo plano, sin mantener la terminal ocupada.
-* -p 8080:80: establece la comunicación entre el puerto 8080 de Ubuntu y el puerto 80 del contenedor, que es el utilizado por Nginx para atender las peticiones HTTP.
-* --name webserver: asigna al contenedor el nombre webserver.
-* nginx: indica la imagen utilizada para crear el contenedor.
+* **-d:** ejecuta el contenedor en segundo plano, sin mantener la terminal ocupada.
+* **-p 8080:80:** establece la comunicación entre el puerto 8080 de Ubuntu y el puerto 80 del contenedor, que es el utilizado por Nginx para atender las peticiones HTTP.
+* **--name webserver:** asigna al contenedor el nombre webserver.
+* **nginx:** indica la imagen utilizada para crear el contenedor.
 
 De esta forma, se crea el contenedor que ejecutará el servidor web Nginx.
 Posteriormente, se ha creado el contenedor correspondiente al servidor de aplicaciones Tomcat utilizando:
@@ -373,9 +373,106 @@ bash
 > sudo docker run -d -p 8081:8080 --name appserver tomcat
 
 En este caso, el funcionamiento es similar al anterior, pero se utilizan otros puertos y un nombre diferente:
-* -d: permite ejecutar el contenedor en segundo plano.
-* -p 8081:8080: conecta el puerto 8081 de Ubuntu con el puerto 8080 del contenedor, que es el utilizado por Tomcat para atender las peticiones.
-* --name appserver: asigna el nombre appserver al contenedor.
-* tomcat: indica la imagen utilizada para crear el contenedor.
+* **-d:** permite ejecutar el contenedor en segundo plano.
+* **-p 8081:8080:** conecta el puerto 8081 de Ubuntu con el puerto 8080 del contenedor, que es el utilizado por Tomcat para atender las peticiones.
+* **--name appserver:** asigna el nombre appserver al contenedor.
+* **tomcat:** indica la imagen utilizada para crear el contenedor.
 
 De esta manera, se dispone de dos contenedores independientes: uno destinado a ejecutar Nginx y otro destinado a ejecutar Tomcat.
+
+**Comprobación del estado de los contenedores**
+Una vez creados los dos contenedores, se ha comprobado su estado mediante el siguiente comando:
+
+bash
+> sudo docker ps
+
+Este comando muestra los contenedores que se encuentran activos en ese momento, proporcionando información como su identificador, imagen utilizada, estado, puertos asignados y nombre.
+
+Posteriormente, también se ha utilizado:
+
+bash
+> sudo docker ps -a
+
+A diferencia del comando anterior, este muestra todos los contenedores existentes, tanto los que están en ejecución como los que se encuentran detenidos o han finalizado.
+
+Esto ha permitido comprobar el estado de los contenedores durante los diferentes intentos de configuración y detectar si alguno de ellos se había detenido.
+
+**Inicio del servidor web Nginx**
+Inicio y comprobación del servidor web Nginx
+
+Durante las primeras pruebas, se han producido algunos problemas para acceder correctamente al servidor Nginx desde el navegador. Para solucionarlo, se ha eliminado el contenedor anterior y se ha creado nuevamente, utilizando la misma configuración de puertos y el nombre webserver. Posteriormente, se ha iniciado mediante el siguiente comando:
+
+bash
+> sudo docker start webserver
+
+Este comando permite iniciar un contenedor que ya ha sido creado previamente y que se encuentra detenido, sin necesidad de volver a descargar la imagen de Nginx.
+
+Una vez iniciado correctamente, se ha comprobado su funcionamiento accediendo desde el navegador a la siguiente dirección:
+**http://localhost:8080**
+
+Al acceder a esta dirección, se muestra la página de bienvenida predeterminada de Nginx, confirmando que el servidor web está funcionando correctamente y que responde a las peticiones realizadas a través del puerto 8080.
+
+**Comprobación y configuración del servidor de aplicaciones Tomcat**
+Durante las primeras pruebas, al acceder a Tomcat desde el navegador mediante http://localhost:8081, no se mostraba ninguna página web, apareciendo el mensaje «Página no encontrada». Tras realizar varias comprobaciones, se detectó que era necesario disponer de una aplicación web desplegada en la ruta principal del servidor para poder visualizar contenido.
+
+Para identificar el problema, se han consultado inicialmente los registros del contenedor mediante:
+
+bash
+> sudo docker logs appserver
+
+Este comando permite visualizar los mensajes generados durante la ejecución de Tomcat y comprobar si se han producido errores.
+
+Posteriormente, se ha revisado el contenido del directorio donde Tomcat almacena las aplicaciones web mediante los siguientes comandos:
+
+bash
+> sudo docker exec appserver ls /usr/local/tomcat/webapps
+
+bash
+> sudo docker exec appserver ls -la /usr/local/tomcat/webapps/
+
+bash
+> sudo docker exec appserver ls -1 /usr/local/tomcat/webapps/
+
+Estos comandos permiten consultar los archivos y directorios existentes en webapps, que es la ubicación donde Tomcat almacena y despliega las aplicaciones web.
+
+Tras realizar estas comprobaciones, se ha decidido descargar una aplicación web de ejemplo en formato WAR (Web Application Archive), ya que era necesario disponer de una aplicación desplegada para mostrar contenido al acceder al servidor desde el navegador.
+
+Para ello, se ha utilizado el siguiente comando:
+
+bash
+> sudo docker exec appserver sh -c 'curl -fL https://tomcat.apache.org/tomcat-9.0-doc/appdev/sample/sample.war -o /usr/local/tomcat/webapps/ROOT.war'
+
+Este comando descarga una aplicación web de ejemplo desde la documentación oficial de Apache Tomcat y la guarda dentro del directorio webapps con el nombre ROOT.war.
+
+Al utilizar este nombre, Tomcat identifica la aplicación como la aplicación principal del servidor, de manera que se puede acceder a ella directamente desde la dirección principal, sin necesidad de indicar una ruta adicional.
+
+Una vez realizada la descarga, se ha comprobado que el archivo se encontraba correctamente ubicado mediante:
+
+bash
+> sudo docker exec appserver ls -l /usr/local/tomcat/webapps/
+
+Tras disponer del archivo ROOT.war, Tomcat ha podido desplegar la aplicación web de ejemplo y mostrar su contenido correctamente al acceder desde el navegador a:
+
+**http://localhost:8081**
+
+De esta manera, se ha solucionado el problema inicial y se ha conseguido visualizar correctamente la aplicación web de ejemplo proporcionada por Apache Tomcat.
+
+**Comprobación de ambos servidores desde el navegador**
+Una vez iniciados y configurados los dos contenedores, se ha comprobado su funcionamiento accediendo a ellos desde el navegador web de Ubuntu.
+
+Para acceder al servidor web Nginx, se ha introducido la siguiente dirección:
+
+text
+**http://localhost:8080**
+
+Al acceder, se muestra la página de bienvenida predeterminada de Nginx, confirmando que el contenedor webserver está funcionando y atendiendo correctamente las peticiones realizadas a través del puerto 8080.
+
+Por otro lado, para comprobar el servidor de aplicaciones Tomcat, se ha accedido a:
+
+text
+**http://localhost:8081**
+
+En este caso, se muestra la aplicación web de ejemplo que se ha descargado previamente y desplegado en el directorio webapps de Tomcat.
+La visualización de esta aplicación permite comprobar que Tomcat ha conseguido desplegar el archivo WAR y que responde correctamente a las peticiones realizadas desde el navegador a través del puerto 8081.
+
+Por tanto, se ha comprobado que ambos contenedores funcionan correctamente y que es posible acceder a los servicios proporcionados por Nginx y Tomcat desde el navegador web.
