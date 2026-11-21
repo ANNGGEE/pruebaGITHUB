@@ -115,7 +115,7 @@ bash
 
 6. Este reinicio permite que los nuevos componentes y controladores instalados se carguen correctamente.
    
-**Comprobación de la instalación**
+#### **Comprobación de la instalación**
 
 Tras reiniciar la máquina virtual, se ha comprobado que las Guest Additions se encuentran funcionando mediante el siguiente comando:
 
