@@ -476,3 +476,17 @@ En este caso, se muestra la aplicación web de ejemplo que se ha descargado prev
 La visualización de esta aplicación permite comprobar que Tomcat ha conseguido desplegar el archivo WAR y que responde correctamente a las peticiones realizadas desde el navegador a través del puerto 8081.
 
 Por tanto, se ha comprobado que ambos contenedores funcionan correctamente y que es posible acceder a los servicios proporcionados por Nginx y Tomcat desde el navegador web.
+
+<img width="899" height="480" alt="Captura 34" src="https://github.com/user-attachments/assets/d2992d63-23ec-49b0-8f27-cea14fb7f2bd" />
+
+<img width="902" height="465" alt="Captura 35" src="https://github.com/user-attachments/assets/432baeba-f833-41ab-85dc-8a766c9c212d" />
+
+ACTIVAR CONTENEDORES: 
+
+<img width="1051" height="287" alt="Captura 36" src="https://github.com/user-attachments/assets/32298886-6b54-4e8a-8fbe-45af1e785c95" />
+
+<img width="1044" height="68" alt="Captura 37" src="https://github.com/user-attachments/assets/ab4251bc-9bdc-4144-9b89-70242846b5f6" />
+
+<img width="1049" height="115" alt="Captura 38" src="https://github.com/user-attachments/assets/35284213-cea0-4d59-9b4d-56d50d46cad7" />
+
+AHORA SÍ FUNCIONA: 
