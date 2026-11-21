@@ -173,7 +173,7 @@ Vemos como se acomoda mejor la pantalla ahora en doble pantalla.
 
 ## **Instalación de Docker en Ubuntu**
 
-Teoría básica sobre contenedores:
+**Teoría básica sobre contenedores:**
 
 Un contenedor es una unidad de software que empaqueta código, dependencias y
 configuraciones necesarias para ejecutar una aplicación. A diferencia de una máquina
@@ -188,7 +188,7 @@ Ventajas de Docker:
 
 ### **Instalación de Docker en Ubuntu**
 
-Teoría básica sobre contenedores
+**Teoría básica sobre contenedores**
 
 Antes de comenzar con la instalación, es importante conocer qué son los contenedores y cuál es la utilidad de Docker.
 Un contenedor es una unidad de software que incluye el código de una aplicación junto con las dependencias, bibliotecas y configuraciones necesarias para que pueda ejecutarse correctamente.
