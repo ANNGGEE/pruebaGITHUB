@@ -514,3 +514,112 @@ AHORA VAMOS A HACER LO MISMO PARA TOMCAT:
 <img width="1051" height="564" alt="Captura 47" src="https://github.com/user-attachments/assets/67a50c77-5285-4b98-b04c-d2fdf946af18" />
 
 <img width="1050" height="563" alt="Captura 48" src="https://github.com/user-attachments/assets/e316f0af-af3e-42fd-bd66-a5ba1c211c73" />
+
+# Documentación y análisis
+
+Cada estudiante deberá elaborar con **Markdown** un informe técnico que incluya los siguientes apartados:
+
+1. Descripción del proceso de instalación de Ubuntu en VirtualBox.
+2. Pasos seguidos para instalar Docker Desktop.
+3. Comandos utilizados para crear y ejecutar los contenedores.
+4. Capturas de pantalla de cada fase.
+5. Descripción de los requerimientos mínimos para implantar una aplicación web, incluyendo:
+   - Requisitos de hardware y software.
+   - Infraestructura de red.
+   - Configuración del servidor web y de aplicaciones.
+   - Seguridad y mantenimiento.
+
+# 5. Requerimientos mínimos para implantar una aplicación web
+
+Para implantar una aplicación web es necesario disponer de una infraestructura que permita ejecutar la aplicación, almacenar sus datos y ofrecer acceso a los usuarios a través de Internet o de una red local.
+
+Los requisitos dependerán del tamaño de la aplicación, del número de usuarios que vayan a utilizarla y de los servicios que necesite. A continuación, se describen los principales elementos necesarios.
+
+## 5.1. Requisitos de hardware y software
+
+Para que una aplicación web funcione correctamente es necesario disponer de un equipo o servidor con recursos suficientes para ejecutar los distintos servicios.
+
+### Requisitos de hardware
+
+- **Procesador (CPU):** Se necesita un procesador capaz de ejecutar el sistema operativo, el servidor web y la aplicación. Como mínimo, se recomienda disponer de 2 núcleos.
+- **Memoria RAM:** Se recomienda un mínimo de 4 GB para entornos pequeños de pruebas, aunque para entornos de producción es aconsejable disponer de 8 GB o más.
+- **Almacenamiento:** Es necesario disponer de espacio suficiente para el sistema operativo, la aplicación, las bases de datos, los archivos y las copias de seguridad. Se recomienda utilizar un SSD.
+- **Conexión de red:** Es necesario disponer de una conexión estable para permitir la comunicación entre los usuarios y el servidor.
+
+### Requisitos de software
+
+- **Sistema operativo:** Ubuntu Server o cualquier otra distribución Linux compatible.
+- **Docker:** Plataforma que permite ejecutar aplicaciones mediante contenedores.
+- **Servidor web:** Nginx o Apache, encargado de recibir y gestionar las peticiones HTTP/HTTPS.
+- **Servidor de aplicaciones:** Tomcat o WildFly, encargado de ejecutar la lógica de la aplicación.
+- **Base de datos:** MySQL, MariaDB o PostgreSQL, dependiendo de las necesidades de la aplicación.
+
+## 5.2. Infraestructura de red
+
+La infraestructura de red permite que los usuarios puedan acceder a la aplicación web y que los distintos servicios del servidor se comuniquen entre sí.
+
+Los principales elementos necesarios son:
+
+- **Dirección IP:** El servidor debe disponer de una dirección IP para poder ser identificado dentro de la red.
+- **Conexión a Internet o red local:** Permite que los usuarios puedan acceder a la aplicación.
+- **Puertos de comunicación:** Es necesario habilitar los puertos correspondientes a cada servicio:
+  - **Puerto 80:** HTTP (acceso web sin cifrar).
+  - **Puerto 443:** HTTPS (acceso web cifrado).
+  - **Puerto 8080:** Puerto habitual de Tomcat.
+- **DNS:** Permite asociar un nombre de dominio a la dirección IP del servidor, por ejemplo, `www.miweb.com`.
+- **Firewall:** Permite controlar las conexiones entrantes y salientes, bloqueando aquellas que no estén autorizadas.
+
+En el caso de utilizar Docker, los contenedores pueden comunicarse entre sí mediante redes virtuales de Docker. Además, es posible publicar determinados puertos para permitir el acceso desde el exterior.
+
+## 5.3. Configuración del servidor web y de aplicaciones
+
+Para desplegar una aplicación web se pueden utilizar diferentes servicios que trabajan conjuntamente.
+
+En este caso, se puede utilizar **Nginx** como servidor web y **Tomcat** como servidor de aplicaciones.
+
+- **Nginx:** Recibe las peticiones HTTP/HTTPS de los usuarios y sirve contenido web. También puede actuar como proxy inverso, enviando las peticiones al servidor de aplicaciones.
+- **Tomcat:** Se encarga de ejecutar aplicaciones web desarrolladas en Java y gestionar su funcionamiento.
+- **Docker:** Permite ejecutar Nginx y Tomcat en contenedores independientes, facilitando su instalación, configuración y mantenimiento.
+
+En la práctica realizada, se han creado dos contenedores independientes:
+
+| Servicio | Contenedor | Puerto |
+|---|---|---|
+| Servidor web | Nginx | 8080 |
+| Servidor de aplicaciones | Tomcat | 8081 |
+
+De esta forma, se puede acceder a cada servicio desde el navegador utilizando las siguientes direcciones:
+
+- **Nginx:** [http://localhost:8080](http://localhost:8080)
+- **Tomcat:** [http://localhost:8081](http://localhost:8081)
+
+En una implantación real, Nginx podría configurarse como proxy inverso para recibir las peticiones de los usuarios y redirigirlas a Tomcat, donde se ejecutaría la aplicación web.
+
+## 5.4. Seguridad y mantenimiento
+
+La seguridad y el mantenimiento son aspectos fundamentales para garantizar que una aplicación web funcione correctamente y esté protegida frente a posibles amenazas.
+
+Entre las principales medidas que se deben aplicar destacan las siguientes:
+
+### Seguridad
+
+- **Actualizaciones:** Mantener actualizado el sistema operativo, Docker y los programas instalados para corregir vulnerabilidades.
+- **Firewall:** Permitir únicamente los puertos necesarios para el funcionamiento de la aplicación.
+- **Certificados SSL/TLS:** Utilizar HTTPS para cifrar la comunicación entre los usuarios y el servidor.
+- **Contraseñas seguras:** Utilizar contraseñas robustas y evitar compartir credenciales entre usuarios.
+- **Control de acceso:** Limitar los permisos de los usuarios y servicios para evitar accesos no autorizados.
+- **Imágenes seguras:** Descargar imágenes de Docker desde repositorios oficiales o fuentes confiables y mantenerlas actualizadas.
+
+### Mantenimiento
+
+- **Copias de seguridad:** Realizar copias periódicas de las bases de datos, archivos y configuraciones.
+- **Monitorización:** Supervisar el consumo de CPU, RAM, almacenamiento y el estado de los contenedores.
+- **Revisión de registros (logs):** Consultar los registros para detectar errores o posibles problemas.
+- **Actualización de contenedores:** Mantener actualizadas las imágenes y aplicaciones utilizadas.
+- **Comprobación de servicios:** Verificar periódicamente que Nginx, Tomcat y el resto de los servicios funcionan correctamente.
+
+## Conclusión
+
+En conclusión, para implantar una aplicación web no basta únicamente con disponer de un servidor. Es necesario contar con hardware adecuado, software compatible, una infraestructura de red correctamente configurada y medidas de seguridad y mantenimiento que garanticen su disponibilidad y funcionamiento.
+
+
