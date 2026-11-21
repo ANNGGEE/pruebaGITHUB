@@ -208,7 +208,7 @@ En primer lugar, se ha preparado el sistema operativo para realizar la instalaci
 bash
 > sudo apt update && sudo apt upgrade -y
 
-El comando sudo apt update actualiza la información de los repositorios, mientras que sudo apt upgrade -y instala las actualizaciones disponibles para los paquetes del sistema.
+El comando _sudo apt update_ actualiza la información de los repositorios, mientras que _sudo apt upgrade -y_ instala las actualizaciones disponibles para los paquetes del sistema.
 
 A continuación, se han instalado las dependencias necesarias para realizar la descarga y posterior instalación de Docker:
 
