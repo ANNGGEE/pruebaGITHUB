@@ -30,7 +30,7 @@ En este caso se ha elegido ubuntu 24.04.5.1-desktop-amd64.iso
 
 <img width="455" height="33" alt="Captura3" src="https://github.com/user-attachments/assets/c3ad8cc9-dc1a-43a2-9229-4efdbcf87dc2" />
 
-CREACIÓN DE LA MÁQUINA VIRTUAL: 
+### **CREACIÓN DE LA MÁQUINA VIRTUAL:**
 Se ha creado una máquina virtual con las especificaciones mentadas arriba: 
 * Nombre: Ubuntu-DAW2DAW 
 * RAM: 4096 MB 
@@ -69,7 +69,7 @@ Finalmente, la máquina virtual arranca desde el disco duro virtual, cargando la
 
 <img width="656" height="345" alt="Captura12" src="https://github.com/user-attachments/assets/3b8bbe86-3bf9-4fe4-a9d0-6f445c9adffb" />
 
-**Configuración inicial de Ubuntu**
+### **Configuración inicial de Ubuntu**
 
 Una vez finalizada la instalación del sistema operativo y reiniciada la máquina virtual, se inicia Ubuntu desde el disco duro virtual.
 Durante el primer arranque aparece un asistente de bienvenida que permite completar la configuración inicial del sistema. Entre sus opciones se encuentra la configuración de determinados servicios y preferencias, así como la posibilidad de activar Ubuntu Pro.
@@ -88,7 +88,7 @@ Una vez completados estos pasos, Ubuntu queda preparado para su utilización.
 
 <img width="650" height="348" alt="Captura17" src="https://github.com/user-attachments/assets/13c20258-4f92-4a05-8135-e5330c54beb3" />
 
-**Instalación y comprobación de las Guest Additions**
+### **Instalación y comprobación de las Guest Additions**
 
 Una vez instalado Ubuntu en la máquina virtual, se ha procedido a instalar las Guest Additions (complementos del invitado) de VirtualBox. Estas herramientas permiten mejorar la integración entre el sistema operativo anfitrión y la máquina virtual, proporcionando funcionalidades como el ajuste automático de la resolución de pantalla.
 
