@@ -517,7 +517,7 @@ AHORA VAMOS A HACER LO MISMO PARA TOMCAT:
 
 <img width="1050" height="563" alt="Captura 48" src="https://github.com/user-attachments/assets/e316f0af-af3e-42fd-bd66-a5ba1c211c73" />
 
-# Documentación y análisis
+## Documentación y análisis
 
 Cada estudiante deberá elaborar con **Markdown** un informe técnico que incluya los siguientes apartados:
 
@@ -531,13 +531,13 @@ Cada estudiante deberá elaborar con **Markdown** un informe técnico que incluy
    - Configuración del servidor web y de aplicaciones.
    - Seguridad y mantenimiento.
 
-# 5. Requerimientos mínimos para implantar una aplicación web
+### Requerimientos mínimos para implantar una aplicación web
 
 Para implantar una aplicación web es necesario disponer de una infraestructura que permita ejecutar la aplicación, almacenar sus datos y ofrecer acceso a los usuarios a través de Internet o de una red local.
 
 Los requisitos dependerán del tamaño de la aplicación, del número de usuarios que vayan a utilizarla y de los servicios que necesite. A continuación, se describen los principales elementos necesarios.
 
-## 5.1. Requisitos de hardware y software
+### Requisitos de hardware y software
 
 Para que una aplicación web funcione correctamente es necesario disponer de un equipo o servidor con recursos suficientes para ejecutar los distintos servicios.
 
@@ -556,7 +556,7 @@ Para que una aplicación web funcione correctamente es necesario disponer de un 
 - **Servidor de aplicaciones:** Tomcat o WildFly, encargado de ejecutar la lógica de la aplicación.
 - **Base de datos:** MySQL, MariaDB o PostgreSQL, dependiendo de las necesidades de la aplicación.
 
-## 5.2. Infraestructura de red
+## Infraestructura de red
 
 La infraestructura de red permite que los usuarios puedan acceder a la aplicación web y que los distintos servicios del servidor se comuniquen entre sí.
 
@@ -573,7 +573,7 @@ Los principales elementos necesarios son:
 
 En el caso de utilizar Docker, los contenedores pueden comunicarse entre sí mediante redes virtuales de Docker. Además, es posible publicar determinados puertos para permitir el acceso desde el exterior.
 
-## 5.3. Configuración del servidor web y de aplicaciones
+## Configuración del servidor web y de aplicaciones
 
 Para desplegar una aplicación web se pueden utilizar diferentes servicios que trabajan conjuntamente.
 
@@ -597,7 +597,7 @@ De esta forma, se puede acceder a cada servicio desde el navegador utilizando la
 
 En una implantación real, Nginx podría configurarse como proxy inverso para recibir las peticiones de los usuarios y redirigirlas a Tomcat, donde se ejecutaría la aplicación web.
 
-## 5.4. Seguridad y mantenimiento
+## Seguridad y mantenimiento
 
 La seguridad y el mantenimiento son aspectos fundamentales para garantizar que una aplicación web funcione correctamente y esté protegida frente a posibles amenazas.
 
