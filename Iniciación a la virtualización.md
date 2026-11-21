@@ -126,7 +126,7 @@ Este comando permite consultar los módulos del núcleo de Linux que están carg
 
 Al aparecer dicho módulo en el resultado, se confirma que está cargado correctamente en el sistema.
 
-**Resultados obtenidos y adaptación de la pantalla**
+### **Resultados obtenidos y adaptación de la pantalla**
 
 Una vez instaladas las Guest Additions, se ha comprobado que la integración entre Ubuntu y VirtualBox ha mejorado, especialmente en lo relacionado con la adaptación automática de la resolución de pantalla.
 
