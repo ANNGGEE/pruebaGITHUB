@@ -490,3 +490,13 @@ ACTIVAR CONTENEDORES:
 <img width="1049" height="115" alt="Captura 38" src="https://github.com/user-attachments/assets/35284213-cea0-4d59-9b4d-56d50d46cad7" />
 
 AHORA SÍ FUNCIONA: 
+
+<img width="1053" height="564" alt="Captura 39" src="https://github.com/user-attachments/assets/3a85fc11-be6a-408e-b21b-c2b85500f02b" />
+
+<img width="1051" height="550" alt="Captura 40" src="https://github.com/user-attachments/assets/0ecb2bc1-7800-4da7-9d5e-84b5efda1785" />
+
+<img width="1051" height="562" alt="Captura 41" src="https://github.com/user-attachments/assets/494564a1-4069-4e4c-8773-fd5fc0371b1c" />
+
+<img width="1070" height="565" alt="Captura 42" src="https://github.com/user-attachments/assets/715f15fc-ac7d-466d-aad1-7284056fafb0" />
+
+AHORA VAMOS A HACER LO MISMO PARA TOMCAT: 
