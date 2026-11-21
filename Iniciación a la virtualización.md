@@ -483,7 +483,7 @@ Por tanto, se ha comprobado que ambos contenedores funcionan correctamente y que
 
 ACTIVAR CONTENEDORES: 
 
-<img width="1051" height="287" alt="Captura 36" src="https://github.com/user-attachments/assets/32298886-6b54-4e8a-8fbe-45af1e785c95" />
+<img width="1199" height="328" alt="Captura 362" src="https://github.com/user-attachments/assets/024d15d1-f3b6-4568-8a4c-1ee78e78b93b" />
 
 <img width="1044" height="68" alt="Captura 37" src="https://github.com/user-attachments/assets/ab4251bc-9bdc-4144-9b89-70242846b5f6" />
 
