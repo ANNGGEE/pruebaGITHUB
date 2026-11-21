@@ -503,9 +503,9 @@ AHORA VAMOS A HACER LO MISMO PARA TOMCAT:
 
 <img width="905" height="497" alt="Captura 43" src="https://github.com/user-attachments/assets/5720625d-937b-47ef-9359-a531952a80e5" />
 
-<img width="902" height="485" alt="Captura 44" src="https://github.com/user-attachments/assets/4ed06cc7-f9dd-4001-8487-b92a8f4d2249" />
+<img width="1207" height="642" alt="Captura 372" src="https://github.com/user-attachments/assets/35b70b9a-106e-489a-bc97-24f3e7bba44d" />
 
-<img width="1051" height="550" alt="Captura 45" src="https://github.com/user-attachments/assets/4f44c7cf-6368-40a9-be61-ef3d87c78315" />
+<img width="1199" height="625" alt="Captura 382" src="https://github.com/user-attachments/assets/7e129bba-7a3f-48da-ad44-7b838b9b7cd5" />
 
 ÚLTIMOS COMANDOS QUE HAN TERMINADO POR HACER QUE FUNCIONE EL TOMCAT: 
 
