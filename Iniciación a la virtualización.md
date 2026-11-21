@@ -500,3 +500,17 @@ AHORA SÍ FUNCIONA:
 <img width="1070" height="565" alt="Captura 42" src="https://github.com/user-attachments/assets/715f15fc-ac7d-466d-aad1-7284056fafb0" />
 
 AHORA VAMOS A HACER LO MISMO PARA TOMCAT: 
+
+<img width="905" height="497" alt="Captura 43" src="https://github.com/user-attachments/assets/5720625d-937b-47ef-9359-a531952a80e5" />
+
+<img width="902" height="485" alt="Captura 44" src="https://github.com/user-attachments/assets/4ed06cc7-f9dd-4001-8487-b92a8f4d2249" />
+
+<img width="1051" height="550" alt="Captura 45" src="https://github.com/user-attachments/assets/4f44c7cf-6368-40a9-be61-ef3d87c78315" />
+
+ÚLTIMOS COMANDOS QUE HAN TERMINADO POR HACER QUE FUNCIONE EL TOMCAT: 
+
+<img width="1052" height="563" alt="Captura 46" src="https://github.com/user-attachments/assets/478a3cd9-6b05-416b-b78a-16efd68fc542" />
+
+<img width="1051" height="564" alt="Captura 47" src="https://github.com/user-attachments/assets/67a50c77-5285-4b98-b04c-d2fdf946af18" />
+
+<img width="1050" height="563" alt="Captura 48" src="https://github.com/user-attachments/assets/e316f0af-af3e-42fd-bd66-a5ba1c211c73" />
