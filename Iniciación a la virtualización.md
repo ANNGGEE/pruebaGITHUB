@@ -43,9 +43,9 @@ Se ha creado una máquina virtual con las especificaciones mentadas arriba:
 
 <img width="656" height="305" alt="Captura6" src="https://github.com/user-attachments/assets/387a3593-5221-4fc1-aada-2320f74a46ca" />
 
-<img width="642" height="382" alt="Captura8" src="https://github.com/user-attachments/assets/c6bfee4b-de0f-41ff-85d0-d097c808c942" />
-
 <img width="643" height="272" alt="Captura7" src="https://github.com/user-attachments/assets/93ec52a0-62f2-413c-bb65-2212f0814d9f" />
+
+<img width="642" height="382" alt="Captura8" src="https://github.com/user-attachments/assets/c6bfee4b-de0f-41ff-85d0-d097c808c942" />
 
 UNA VEZ INSTALADO: 
 
