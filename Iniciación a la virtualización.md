@@ -301,9 +301,9 @@ Se ha instalado el ./docker-desktop-amd64.deb de la página oficial de docker de
 
 <img width="649" height="342" alt="Captura33" src="https://github.com/user-attachments/assets/cb09e6a4-bab4-4f9f-a3b7-bbb05a95516a" />
 
-**Instalación de contenedores de servidor web y de aplicaciones**
-* Servidor web: Atiende peticiones HTTP/HTTPS (ej. Nginx, Apache). 
-* Servidor de aplicaciones:
+## **Instalación de contenedores de servidor web y de aplicaciones**
+* **Servidor web:** Atiende peticiones HTTP/HTTPS (ej. Nginx, Apache). 
+* **Servidor de aplicaciones:**
 
 Ejecuta la lógica de negocio (ej. Tomcat, WildFly). 
 
@@ -324,8 +324,8 @@ Abrir en el navegador:
 
 Prueba ambos servidores desde tu navegador y toma capturas de pantalla del resultado. 
 
-**Instalación de contenedores de servidor web y de aplicaciones**
-Teoría básica: servidores web y servidores de aplicaciones
+## **Instalación de contenedores de servidor web y de aplicaciones**
+**Teoría básica:** servidores web y servidores de aplicaciones
 
 Antes de comenzar con la instalación de los contenedores, es importante conocer la diferencia entre un servidor web y un servidor de aplicaciones.
 
@@ -336,10 +336,10 @@ Su función principal es proporcionar contenido web, como páginas HTML, imágen
 Un servidor de aplicaciones es un software que permite ejecutar aplicaciones y gestionar su lógica de negocio, procesando las peticiones recibidas y proporcionando las respuestas correspondientes. Un ejemplo es Apache Tomcat, que permite ejecutar aplicaciones web desarrolladas en Java.
 
 En esta práctica se van a utilizar dos herramientas:
-* Nginx: se utilizará como servidor web para atender las peticiones realizadas desde el navegador.
-* Apache Tomcat: se utilizará como servidor de aplicaciones para ejecutar una aplicación web.
+* **Nginx:** se utilizará como servidor web para atender las peticiones realizadas desde el navegador.
+* **Apache Tomcat:** se utilizará como servidor de aplicaciones para ejecutar una aplicación web.
 
-**Instalación y configuración de los contenedores en Docker**
+### **Instalación y configuración de los contenedores en Docker**
 En primer lugar, se han buscado las imágenes de Nginx y Tomcat disponibles en Docker Hub, que es el repositorio desde el que Docker permite obtener imágenes para crear contenedores.
 
 Para buscar la imagen de Nginx se ha utilizado el siguiente comando:
