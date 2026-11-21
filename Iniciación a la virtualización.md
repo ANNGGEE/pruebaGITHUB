@@ -136,10 +136,10 @@ Además, al volver a ampliar la ventana después de utilizar la máquina virtual
 
 Después de instalar las Guest Additions, este comportamiento ha mejorado considerablemente:
 
-* Ventana en tamaño reducido: al colocar la máquina virtual ocupando la mitad de la pantalla, Ubuntu adapta automáticamente su resolución al nuevo espacio disponible.
-* Pantalla completa: al ampliar la ventana, el escritorio se ajusta automáticamente al tamaño de la pantalla.
-* Configuración de doble pantalla: la máquina virtual adapta su visualización al cambiar entre las diferentes pantallas.
-* Restauración del tamaño: al volver a ampliar la ventana después de utilizarla en modo reducido o en doble pantalla, el escritorio recupera automáticamente su tamaño adecuado, sin necesidad de reiniciar la máquina virtual.
+* **Ventana en tamaño reducido:** al colocar la máquina virtual ocupando la mitad de la pantalla, Ubuntu adapta automáticamente su resolución al nuevo espacio disponible.
+* **Pantalla completa:** al ampliar la ventana, el escritorio se ajusta automáticamente al tamaño de la pantalla.
+* **Configuración de doble pantalla:** la máquina virtual adapta su visualización al cambiar entre las diferentes pantallas.
+* **Restauración del tamaño:** al volver a ampliar la ventana después de utilizarla en modo reducido o en doble pantalla, el escritorio recupera automáticamente su tamaño adecuado, sin necesidad de reiniciar la máquina virtual.
 
 Por tanto, se ha comprobado que las Guest Additions no solo se han instalado correctamente, sino que también mejoran notablemente la integración y la experiencia de uso de Ubuntu dentro de VirtualBox.
 
