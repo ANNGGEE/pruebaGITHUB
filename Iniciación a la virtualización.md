@@ -88,11 +88,11 @@ Una vez completados estos pasos, Ubuntu queda preparado para su utilización.
 
 <img width="650" height="348" alt="Captura17" src="https://github.com/user-attachments/assets/13c20258-4f92-4a05-8135-e5330c54beb3" />
 
-### **Instalación y comprobación de las Guest Additions**
+## **Instalación y comprobación de las Guest Additions**
 
 Una vez instalado Ubuntu en la máquina virtual, se ha procedido a instalar las Guest Additions (complementos del invitado) de VirtualBox. Estas herramientas permiten mejorar la integración entre el sistema operativo anfitrión y la máquina virtual, proporcionando funcionalidades como el ajuste automático de la resolución de pantalla.
 
-## **Procedimiento de instalación**
+### **Procedimiento de instalación**
 
 Para realizar la instalación, se han seguido los siguientes pasos:
 
