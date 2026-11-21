@@ -171,7 +171,8 @@ Vemos como se acomoda mejor la pantalla ahora en doble pantalla.
 
 <img width="299" height="337" alt="Captura25" src="https://github.com/user-attachments/assets/c83c0043-20f6-4d5f-8865-6f778c5f369b" />
 
-**Instalación de Docker en Ubuntu**
+## **Instalación de Docker en Ubuntu**
+
 Teoría básica sobre contenedores:
 
 Un contenedor es una unidad de software que empaqueta código, dependencias y
@@ -185,7 +186,7 @@ Ventajas de Docker:
 * Escalabilidad
 * Rapidez de despliegue
 
-**Instalación de Docker en Ubuntu**
+### **Instalación de Docker en Ubuntu**
 
 Teoría básica sobre contenedores
 
@@ -197,12 +198,11 @@ A diferencia de una máquina virtual, los contenedores no necesitan disponer de 
 Docker es una plataforma que permite crear, ejecutar y gestionar contenedores, facilitando el desarrollo y despliegue de aplicaciones en diferentes entornos.
 
 Entre las principales ventajas que ofrece Docker destacan las siguientes:
-* Portabilidad: permite ejecutar aplicaciones en diferentes sistemas y entornos manteniendo sus dependencias y configuraciones.
-* Aislamiento: cada contenedor funciona en un entorno aislado, permitiendo separar las aplicaciones y sus procesos.
-* Escalabilidad: facilita aumentar o reducir el número de contenedores según las necesidades de la aplicación.
-* Rapidez de despliegue: permite crear y ejecutar aplicaciones rápidamente, sin necesidad de configurar un sistema operativo completo para cada una.
+* **Portabilidad:** permite ejecutar aplicaciones en diferentes sistemas y entornos manteniendo sus dependencias y configuraciones.
+* **Aislamiento:** cada contenedor funciona en un entorno aislado, permitiendo separar las aplicaciones y sus procesos.
+* **Escalabilidad:** facilita aumentar o reducir el número de contenedores según las necesidades de la aplicación.
+* **Rapidez de despliegue:** permite crear y ejecutar aplicaciones rápidamente, sin necesidad de configurar un sistema operativo completo para cada una.
 
-**Instalación de Docker Desktop en Ubuntu**
 En primer lugar, se ha preparado el sistema operativo para realizar la instalación de Docker. Para ello, se han actualizado los repositorios y los paquetes de Ubuntu mediante el siguiente comando:
 
 bash
