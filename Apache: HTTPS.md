@@ -1,4 +1,3 @@
-
 # Implementación del protocolo HTTPS en un servidor web Apache2 sobre Ubuntu
 
 ## 1. Introducción y objetivos
@@ -124,18 +123,21 @@ En primer lugar, se actualizan los repositorios de Ubuntu:
 ```bash
 sudo apt update
 ```
+<img width="1365" height="726" alt="imagen" src="https://github.com/user-attachments/assets/c05e4e42-20cb-45ec-b708-c8d8a19f615c" />
 
 A continuación, se instala Apache2:
 
 ```bash
 sudo apt install apache2 -y
 ```
+<img width="1365" height="726" alt="imagen" src="https://github.com/user-attachments/assets/d5bd8106-042e-47c2-a609-aa06702bb1ce" />
 
 Para comprobar que el servicio está funcionando correctamente:
 
 ```bash
 sudo systemctl status apache2
 ```
+<img width="1365" height="726" alt="imagen" src="https://github.com/user-attachments/assets/85794137-7036-4dbb-9b63-b3fa9d4b40fe" />
 
 El resultado esperado es que el servicio aparezca como `active (running)`.
 
@@ -146,6 +148,7 @@ Se habilita el módulo SSL:
 ```bash
 sudo a2enmod ssl
 ```
+<img width="1238" height="398" alt="imagen" src="https://github.com/user-attachments/assets/d3fd3f7b-e75c-4349-9aba-3c32ddae3a9e" />
 
 También se habilita el módulo headers:
 
@@ -153,11 +156,14 @@ También se habilita el módulo headers:
 sudo a2enmod headers
 ```
 
+<img width="1238" height="398" alt="imagen" src="https://github.com/user-attachments/assets/ef9cbdab-fd6f-463f-880b-858a10476185" />
+
 Una vez habilitados, se comprueba la configuración de Apache:
 
 ```bash
 sudo apache2ctl configtest
 ```
+<img width="1238" height="398" alt="imagen" src="https://github.com/user-attachments/assets/f7f793a5-2f0e-4150-96a3-bded004d528e" />
 
 El resultado esperado es:
 
@@ -178,6 +184,7 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 -subj "/CN=localhost" \
 -addext "subjectAltName=DNS:localhost,IP:127.0.0.1"
 ```
+<img width="1365" height="728" alt="imagen" src="https://github.com/user-attachments/assets/d399e08a-11f0-4a07-8b4f-d6604681c5df" />
 
 Este comando genera:
 
@@ -192,12 +199,15 @@ Se establecen permisos adecuados para proteger la clave privada:
 sudo chmod 600 /etc/ssl/private/apache-selfsigned.key
 ```
 
+<img width="920" height="180" alt="imagen" src="https://github.com/user-attachments/assets/c17e0ad3-58a9-4cf8-9f00-31f7db98d775" />
+
 Para comprobar que los archivos se han creado correctamente:
 
 ```bash
 sudo ls -l /etc/ssl/private/apache-selfsigned.key
 sudo ls -l /etc/ssl/certs/apache-selfsigned.crt
 ```
+<img width="920" height="180" alt="imagen" src="https://github.com/user-attachments/assets/7167c0a7-9920-4183-ab6e-75b2d52a3ecd" />
 
 ### 3.4. Configuración del VirtualHost HTTPS
 
@@ -206,6 +216,7 @@ Se creará un archivo de configuración específico para nuestro servidor:
 ```bash
 sudo nano /etc/apache2/sites-available/https-local.conf
 ```
+<img width="943" height="61" alt="imagen" src="https://github.com/user-attachments/assets/48dc3e46-c4ad-4961-b397-d57ff57a8f93" />
 
 Dentro del archivo se introducirá la siguiente configuración:
 
@@ -237,6 +248,8 @@ Dentro del archivo se introducirá la siguiente configuración:
 </VirtualHost>
 ```
 
+<img width="1365" height="728" alt="imagen" src="https://github.com/user-attachments/assets/4985ccac-2fff-4d23-957f-5d87c6bbcab9" />
+
 La configuración anterior realiza las siguientes funciones:
 
 - El primer VirtualHost escucha en el puerto 80 y redirige las peticiones HTTP a HTTPS.
@@ -258,12 +271,14 @@ Se habilita el nuevo sitio mediante el siguiente comando:
 ```bash
 sudo a2ensite https-local.conf
 ```
+<img width="956" height="403" alt="imagen" src="https://github.com/user-attachments/assets/ef5ef8f2-7a2c-444b-89b4-00d06ec3856b" />
 
 A continuación, se comprueba que no existen errores de configuración:
 
 ```bash
 sudo apache2ctl configtest
 ```
+<img width="956" height="403" alt="imagen" src="https://github.com/user-attachments/assets/2c664b2f-3e01-4e64-a050-623f2264e991" />
 
 Si aparece `Syntax OK`, la configuración es correcta.
 
@@ -274,12 +289,14 @@ Se recarga la configuración del servidor:
 ```bash
 sudo systemctl reload apache2
 ```
+<img width="956" height="403" alt="imagen" src="https://github.com/user-attachments/assets/81c53f33-3fd3-47bc-a812-f55d1eebc2c6" />
 
 Se comprueba nuevamente su estado:
 
 ```bash
 sudo systemctl status apache2
 ```
+<img width="956" height="403" alt="imagen" src="https://github.com/user-attachments/assets/50c05386-f606-4a1e-bcc9-0acf5f64582a" />
 
 El servicio debe continuar apareciendo como `active (running)`.
 
@@ -294,6 +311,8 @@ Se ejecuta el siguiente comando:
 ```bash
 curl -k -I https://localhost
 ```
+
+<img width="593" height="294" alt="imagen" src="https://github.com/user-attachments/assets/d5a0cb40-d544-45b4-9ce5-dfdf2762606b" />
 
 El parámetro `-k` permite realizar la conexión aunque el certificado sea autofirmado y no esté reconocido por el sistema.
 
@@ -314,6 +333,7 @@ Se ejecuta:
 ```bash
 curl -I http://localhost
 ```
+<img width="573" height="194" alt="imagen" src="https://github.com/user-attachments/assets/4b1462a1-9ced-4f75-8d39-c1e84ce06081" />
 
 El resultado esperado es una respuesta de redirección:
 
@@ -332,6 +352,14 @@ También se puede consultar la información del certificado mediante OpenSSL:
 openssl s_client -connect localhost:443 -servername localhost
 ```
 
+<img width="1365" height="732" alt="imagen" src="https://github.com/user-attachments/assets/5f55a6c9-ac2b-415f-aab2-a22912f7e3ab" />
+
+<img width="935" height="723" alt="imagen" src="https://github.com/user-attachments/assets/d7a00c27-53e4-4ace-8c85-1d1413b449b2" />
+
+<img width="1365" height="728" alt="imagen" src="https://github.com/user-attachments/assets/0f02bb24-bdca-45ea-b3b1-e26ac29e051c" />
+
+<img width="932" height="371" alt="imagen" src="https://github.com/user-attachments/assets/96352d9b-8f3c-4b39-be27-6d4a63cb430b" />
+
 Este comando permite comprobar que el servidor presenta un certificado durante el establecimiento de la conexión TLS.
 
 Al tratarse de un certificado autofirmado, es normal que OpenSSL indique que no puede verificar la cadena de confianza.
@@ -344,11 +372,19 @@ Finalmente, se abre un navegador web y se introduce la siguiente dirección:
 https://localhost
 ```
 
+<img width="1365" height="734" alt="imagen" src="https://github.com/user-attachments/assets/39823213-6ebe-41c8-beee-0582884032c6" />
+
 La página debería cargarse correctamente.
 
 Es posible que el navegador muestre una advertencia indicando que el certificado no es de confianza. Esto es normal porque se está utilizando un certificado autofirmado.
 
 Una vez superada la advertencia para realizar la prueba, se podrá comprobar que la página se carga mediante HTTPS.
+
+<img width="1365" height="729" alt="imagen" src="https://github.com/user-attachments/assets/7ae86ad4-3598-4dd0-b1a9-586f4b0addea" />
+
+COMPROBACIÓN MEDIANTE TERMINAL (BORRAR SI NO ES NECESARIO)
+
+<img width="702" height="456" alt="imagen" src="https://github.com/user-attachments/assets/11685d8e-1a84-4fa9-8d49-62e1bd695222" />
 
 ## 5. Capturas de pantalla y evidencias
 
