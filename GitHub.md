@@ -75,11 +75,11 @@ Las acciones de GitHub o _GitHub Actions_ son una herramienta de automatización
 Esta herramienta resulta especialmente útil para la integración y entrega continuas (CI/CD), la automatización de tareas repetitivas y la ejecución de procesos en diferentes entornos de desarrollo.
 
 **Algunos conceptos clave pueden ser:** 
-* Flujos de trabajo (workflows): Procesos automatizados y configurables que se definen en tu repositorio mediante archivos de texto con formato YAML.
-* Eventos (Events): Desencadenantes que inician un flujo de trabajo, por ejemplo, cuando alguien hace _push_, se abre una solicitud de extracción de _pull request_, o según una programación de hora.
-* Acciones (Actions): Son bloques de código individuales, reutilizables y empaquetados que realizan tareas específicas dentro de un flujo de trabajo.
-* Ejecutores (Runners): Son las máquinas virtuales proporcionadas por GitHub donde se ejecutan realmente estos códigos y tareas.
-* GitHub Marketplace: Un directorio donde puedes encontrar y utilizar miles de acciones creadas por la comunidad y por diversas empresas para ahorrar tiempo.
+* **Flujos de trabajo (workflows):** Procesos automatizados y configurables que se definen en tu repositorio mediante archivos de texto con formato YAML.
+* **Eventos (Events):** Desencadenantes que inician un flujo de trabajo, por ejemplo, cuando alguien hace _push_, se abre una solicitud de extracción de _pull request_, o según una programación de hora.
+* **Acciones (Actions):** Son bloques de código individuales, reutilizables y empaquetados que realizan tareas específicas dentro de un flujo de trabajo.
+* **Ejecutores (Runners):** Son las máquinas virtuales proporcionadas por GitHub donde se ejecutan realmente estos códigos y tareas.
+* **GitHub Marketplace:** Un directorio donde puedes encontrar y utilizar miles de acciones creadas por la comunidad y por diversas empresas para ahorrar tiempo.
 
 ![Imagen de los conceptos](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr_1szYYhGP-MPANk_556BeWtxpdiD9JCxdqdCqgbLSS2Ny6QPC82sjoQ&s=10)
 
