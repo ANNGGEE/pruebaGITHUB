@@ -24,3 +24,26 @@ Son aplicaciones web de administración de **Tomcat**.
     Host Manager: permite administrar los hosts virtuales de Tomcat.
 
 Ambas aplicaciones se encuentran normalmente dentro del **directorio webapps**, en las carpetas **_manager_** y **_host-manager_**.
+
+
+## Estructura básica de directorios
+
+**Tomcat** organiza sus archivos en diferentes carpetas para facilitar su administración:
+
+| Directorio | Función |
+|---|---|
+| `bin` | Contiene los scripts para iniciar, detener y administrar Tomcat, como `startup.sh` y `shutdown.sh`. |
+| `conf` | Guarda los archivos de configuración, como `server.xml`, `web.xml` y `tomcat-users.xml`. |
+| `webapps` | Contiene las aplicaciones web que Tomcat despliega y ejecuta. |
+| `lib` | Almacena las bibliotecas Java necesarias para el funcionamiento de Tomcat. |
+| `logs` | Guarda los registros de actividad, errores y eventos del servidor. |
+
+En **Ubuntu**, cuando se instala **Tomcat** mediante **APT**, los directorios suelen estar separados:
+
+* **Ejecutables:** `/usr/share/tomcat10/bin` (scripts y archivos asociados)
+* **Configuración:** `/etc/tomcat10`
+* **Aplicaciones:** `/var/lib/tomcat10/webapps`
+* **Bibliotecas:** `/usr/share/tomcat10/lib`
+* **Registros:** `/var/log/tomcat10`
+
+  
