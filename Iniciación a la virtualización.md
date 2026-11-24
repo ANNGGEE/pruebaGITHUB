@@ -10,10 +10,10 @@ La virtualización es una tecnología que permite ejecutar varios sistemas opera
 **Instalación de Ubuntu en VirtualBox**
 1. Descarga la ISO de Ubuntu 24.04 LTS desde la página oficial de Ubuntu. 
 2. Crea una nueva máquina virtual con las siguientes características recomendadas:  
-    * Nombre: Ubuntu-DAW2DAW 
-    * RAM: 4096 MB 
-    * Disco duro virtual: mínimo 50 GB 
-    * Tipo de red: NAT
+    * **Nombre:** Ubuntu-DAW2DAW 
+    * **RAM:** 4096 MB 
+    * **Disco duro virtual:** mínimo 50 GB 
+    * **Tipo de red:** NAT
 3. Instala las Guest Additions 
 4. Toma una captura de pantalla del escritorio una vez instalado. 
 
@@ -32,10 +32,10 @@ En este caso se ha elegido ubuntu 24.04.5.1-desktop-amd64.iso
 
 ## **CREACIÓN DE LA MÁQUINA VIRTUAL:**
 Se ha creado una máquina virtual con las especificaciones mentadas arriba: 
-* Nombre: Ubuntu-DAW2DAW 
-* RAM: 4096 MB 
-* Disco duro virtual: mínimo 50 GB 
-* Tipo de red: NAT
+* **Nombre:** Ubuntu-DAW2DAW 
+* **RAM:** 4096 MB 
+* **Disco duro virtual:** mínimo 50 GB 
+* **Tipo de red:** NAT
 
 <img width="655" height="336" alt="Captura4" src="https://github.com/user-attachments/assets/c75bc5c3-6d2f-4047-8685-37d4df3b346b" />
 
