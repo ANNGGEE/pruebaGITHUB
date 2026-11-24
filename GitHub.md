@@ -54,13 +54,13 @@ En este informe se presentan los principales usos de GitHub y se explican, paso 
 
 Además de los usos mencionados anteriormente, GitHub permite realizar diferentes acciones para gestionar y desarrollar proyectos. Entre las más importantes se encuentran:
 
- * Crear repositorios: organizar y almacenar los archivos de un proyecto.
- * Subir archivos: añadir documentos, imágenes y código a un repositorio.
- * Realizar commits: guardar un registro de los cambios realizados.
- * Crear ramas: trabajar en modificaciones sin alterar directamente la rama principal.
- * Crear pull requests: proponer y revisar cambios antes de incorporarlos al proyecto.
- * Gestionar incidencias con GitHub Issues: registrar errores, tareas y propuestas de mejora.
- * Publicar páginas web con GitHub Pages: crear sitios web estáticos a partir de un repositorio.
+ * **Crear repositorios:** organizar y almacenar los archivos de un proyecto.
+ * **Subir archivos:** añadir documentos, imágenes y código a un repositorio.
+ * **Realizar commits:** guardar un registro de los cambios realizados.
+ * **Crear ramas:** trabajar en modificaciones sin alterar directamente la rama principal.
+ * **Crear pull requests:** proponer y revisar cambios antes de incorporarlos al proyecto.
+ * **Gestionar incidencias con GitHub Issues:** registrar errores, tareas y propuestas de mejora.
+ * **Publicar páginas web con GitHub Pages:** crear sitios web estáticos a partir de un repositorio.
 
 ## **Pasos a seguir para conseguir las diferentes acciones**
 [Volver al índice](#indice)
