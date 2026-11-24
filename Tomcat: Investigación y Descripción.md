@@ -46,4 +46,16 @@ En **Ubuntu**, cuando se instala **Tomcat** mediante **APT**, los directorios su
 * **Bibliotecas:** `/usr/share/tomcat10/lib`
 * **Registros:** `/var/log/tomcat10`
 
-  
+## **Flujo interno de funcionamiento**
+
+Cuando un usuario accede a una aplicación web alojada en **Tomcat**, se produce el siguiente proceso:
+
+* **Recepción de la petición:** Coyote recibe la solicitud HTTP enviada desde el navegador, normalmente por el puerto 8080.
+* **Procesamiento:** Catalina recibe la petición y la dirige al contenedor correspondiente.
+* **Contenedores:** Tomcat utiliza una estructura formada por Engine, Host, Context y Wrapper para identificar qué aplicación y servlet deben atender la solicitud.
+* **Ejecución:** El servlet procesa la petición y genera una respuesta. Si se utiliza una página JSP, Jasper se encarga de convertirla y compilarla cuando sea necesario.
+* **Respuesta:** Tomcat devuelve el resultado al navegador mediante Coyote.
+
+**Despliegue de aplicaciones:** Tomcat permite instalar aplicaciones web copiando sus archivos WAR o sus carpetas directamente en webapps.
+
+El servidor detecta las aplicaciones y las prepara para su ejecución.
