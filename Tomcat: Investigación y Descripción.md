@@ -19,8 +19,8 @@
 
 Son aplicaciones web de administración de **Tomcat**.
 
-    **Manager:** permite desplegar, detener, iniciar y eliminar aplicaciones web desde un navegador.
+    Manager: permite desplegar, detener, iniciar y eliminar aplicaciones web desde un navegador.
 
-    **Host Manager:** permite administrar los hosts virtuales de Tomcat.
+    Host Manager: permite administrar los hosts virtuales de Tomcat.
 
 Ambas aplicaciones se encuentran normalmente dentro del **directorio webapps**, en las carpetas **_manager_** y **_host-manager_**.
