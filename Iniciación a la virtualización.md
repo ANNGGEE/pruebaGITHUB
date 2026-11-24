@@ -485,7 +485,7 @@ sudo docker exec appserver ls -l /usr/local/tomcat/webapps/
 Tras disponer del archivo ROOT.war, Tomcat ha podido desplegar la aplicación web de ejemplo y mostrar su contenido correctamente al acceder desde el navegador a:
 
 ```text
-**http://localhost:8081**
+http://localhost:8081
 ```
 
 De esta manera, se ha solucionado el problema inicial y se ha conseguido visualizar correctamente la aplicación web de ejemplo proporcionada por Apache Tomcat.
@@ -496,7 +496,7 @@ Una vez iniciados y configurados los dos contenedores, se ha comprobado su funci
 Para acceder al servidor web Nginx, se ha introducido la siguiente dirección:
 
 ```text
-**http://localhost:8080**
+http://localhost:8080
 ```
 
 Al acceder, se muestra la página de bienvenida predeterminada de Nginx, confirmando que el contenedor webserver está funcionando y atendiendo correctamente las peticiones realizadas a través del puerto 8080.
@@ -504,7 +504,7 @@ Al acceder, se muestra la página de bienvenida predeterminada de Nginx, confirm
 Por otro lado, para comprobar el servidor de aplicaciones Tomcat, se ha accedido a:
 
 ```text
-**http://localhost:8081**
+http://localhost:8081
 ```
 
 En este caso, se muestra la aplicación web de ejemplo que se ha descargado previamente y desplegado en el directorio webapps de Tomcat.
