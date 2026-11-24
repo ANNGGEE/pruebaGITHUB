@@ -69,6 +69,9 @@ Si lo instalamos desde la terminal de **Ubuntu**.
 sudo apt update
 sudo apt upgrade -y
 ```
+<img width="1109" height="729" alt="sudoaptupdate" src="https://github.com/user-attachments/assets/63ab19ca-35e9-476a-80b7-1138335199d9" />
+
+<img width="1102" height="727" alt="sudoaptupgrade" src="https://github.com/user-attachments/assets/0aa3ca1f-030b-47b0-91c2-9e912424b4eb" />
 
 2. **Instalar Java**
 
@@ -78,11 +81,15 @@ Tomcat necesita Java para funcionar.
 sudo apt install default-jdk -y
 ```
 
+<img width="1149" height="725" alt="Default-jdk-y" src="https://github.com/user-attachments/assets/7e8554d1-2ee7-4bb8-a451-995be1774607" />
+
 Comprobamos que está instalado:
 
 ```bash
 java -version
 ```
+
+<img width="925" height="137" alt="javaversion" src="https://github.com/user-attachments/assets/a6f084fb-5529-4294-8a0f-9fca5985efdb" />
 
 3. **Instalar Tomcat**
 
@@ -92,11 +99,16 @@ En Ubuntu 24.04 podemos instalar Tomcat 10 con:
 sudo apt install tomcat10 tomcat10-admin -y
 ```
 
+<img width="1046" height="728" alt="InstallTomcat10" src="https://github.com/user-attachments/assets/13c7aaec-e97f-4109-8357-a77f4505ba0f" />
+
 4. **Comprobar que funciona**
 
 ```bash
 sudo systemctl status tomcat10
 ```
+
+<img width="862" height="727" alt="StatusTomcat10" src="https://github.com/user-attachments/assets/f05f7b6b-97c5-4d72-b8dd-c1a8ffe65443" />
+
 
 Debería aparecer como active (running).
 
@@ -112,6 +124,8 @@ Para que se inicie automáticamente al encender Ubuntu:
 sudo systemctl enable tomcat10
 ```
 
+<img width="705" height="87" alt="EnableTomcat10" src="https://github.com/user-attachments/assets/18827b5b-9507-4f4b-9acb-16fced2ec152" />
+
 5. **Acceder desde el navegador**
 
 Abrimos el navegador de la máquina virtual y escribimos:
@@ -119,6 +133,8 @@ Abrimos el navegador de la máquina virtual y escribimos:
 Página de Tomcat
 
 `http://localhost:8080`
+
+<img width="1365" height="724" alt="ItWorks" src="https://github.com/user-attachments/assets/14dedb81-4b0a-4f2b-933b-8d637ec9b3cc" />
 
 Si aparece la página de bienvenida de Apache Tomcat, la instalación ha funcionado 
 
