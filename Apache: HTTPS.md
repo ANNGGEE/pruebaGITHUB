@@ -376,9 +376,13 @@ https://localhost
 
 La página debería cargarse correctamente.
 
-Es posible que el navegador muestre una advertencia indicando que el certificado no es de confianza. Esto es normal porque se está utilizando un certificado autofirmado.
+Al acceder al servidor mediante HTTPS, Firefox mostró una advertencia de seguridad debido a que el certificado utilizado era autofirmado y no estaba emitido por una autoridad certificadora reconocida.
 
-Una vez superada la advertencia para realizar la prueba, se podrá comprobar que la página se carga mediante HTTPS.
+Tras comprobar que se trataba del certificado generado durante la práctica, se permitió el acceso para verificar el funcionamiento del servidor.
+
+Una vez superada la advertencia, se comprobó que la página predeterminada de Apache2 se cargaba correctamente utilizando una conexión HTTPS.
+
+Esta advertencia es un comportamiento esperado cuando se utilizan certificados autofirmados, ya que los navegadores no confían automáticamente en ellos.
 
 <img width="1365" height="729" alt="imagen" src="https://github.com/user-attachments/assets/7ae86ad4-3598-4dd0-b1a9-586f4b0addea" />
 
@@ -409,8 +413,10 @@ Durante el proceso se ha instalado Apache2, se han habilitado los módulos neces
 
 También se ha configurado un VirtualHost para permitir conexiones seguras mediante el puerto 443 y se ha establecido una redirección automática desde HTTP hacia HTTPS.
 
-Las pruebas realizadas mediante curl, OpenSSL y el navegador permiten verificar que el servidor responde correctamente utilizando conexiones cifradas.
+Las pruebas realizadas han resultado satisfactorias. Se ha comprobado mediante curl que el servidor responde con un código HTTP 200 OK al acceder mediante HTTPS. Asimismo, se ha verificado que las peticiones realizadas mediante HTTP reciben una respuesta 301 Moved Permanently y son redirigidas al protocolo HTTPS.
 
-Una de las principales dificultades encontradas ha sido la utilización de un certificado autofirmado, ya que los navegadores no lo reconocen como una entidad de confianza y muestran advertencias de seguridad.
+Finalmente, se ha comprobado mediante Firefox que la página predeterminada de Apache2 se carga correctamente utilizando una conexión segura.
 
-En conclusión, esta práctica ha permitido comprender la importancia de HTTPS en la seguridad web y conocer los pasos necesarios para configurar un servidor Apache2 con SSL/TLS. Además, se ha comprobado que HTTPS es fundamental para proteger la confidencialidad e integridad de la información transmitida entre clientes y servidores.
+Durante la comprobación mediante el navegador apareció una advertencia de seguridad debido a que el certificado utilizado era autofirmado. Esto ha permitido comprender la diferencia entre los certificados autofirmados y los emitidos por autoridades certificadoras de confianza.
+
+En conclusión, esta práctica ha permitido comprender la importancia de HTTPS en la seguridad web y conocer los pasos necesarios para configurar un servidor Apache2 con SSL/TLS. Además, se ha comprobado que HTTPS permite proteger la confidencialidad e integridad de la información transmitida entre clientes y servidores.
