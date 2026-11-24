@@ -70,52 +70,55 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-Paso 2. Instalar Java
+2. **Instalar Java**
 
 Tomcat necesita Java para funcionar.
-bash
 
+```bash
 sudo apt install default-jdk -y
+```
 
-Comprueba que está instalado:
-bash
+Comprobamos que está instalado:
 
+```bash
 java -version
+```
 
-Paso 3. Instalar Tomcat
+3. **Instalar Tomcat**
 
-En Ubuntu 24.04 puedes instalar Tomcat 10 con:
-bash
+En Ubuntu 24.04 podemos instalar Tomcat 10 con:
 
+```bash
 sudo apt install tomcat10 tomcat10-admin -y
+```
 
-Si tu Ubuntu no encuentra esos paquetes, dime qué versión tienes y adaptamos los comandos.
-Paso 4. Comprobar que funciona
+4. **Comprobar que funciona**
 
-Ejecuta:
-bash
-
+```bash
 sudo systemctl status tomcat10
+```
 
 Debería aparecer como active (running).
 
-Si no está iniciado, puedes arrancarlo con:
-bash
+Si no está iniciado, se puede arrancar con:
 
+```bash
 sudo systemctl start tomcat10
+```
 
 Para que se inicie automáticamente al encender Ubuntu:
-bash
 
+```bash
 sudo systemctl enable tomcat10
+```
 
-Paso 5. Acceder desde el navegador
+5. **Acceder desde el navegador**
 
-Abre el navegador de tu máquina virtual y escribe:
+Abrimos el navegador de la máquina virtual y escribimos:
 
 Página de Tomcat
 
-http://localhost:8080
+`http://localhost:8080`
 
-Si aparece la página de bienvenida de Apache Tomcat, ¡la instalación ha funcionado! 
+Si aparece la página de bienvenida de Apache Tomcat, la instalación ha funcionado 
 
