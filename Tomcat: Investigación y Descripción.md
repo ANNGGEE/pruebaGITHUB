@@ -59,3 +59,63 @@ Cuando un usuario accede a una aplicación web alojada en **Tomcat**, se produce
 **Despliegue de aplicaciones:** Tomcat permite instalar aplicaciones web copiando sus archivos WAR o sus carpetas directamente en webapps.
 
 El servidor detecta las aplicaciones y las prepara para su ejecución.
+
+## **Instalación de Tomcat en Ubuntu**
+
+Si lo instalamos desde la terminal de **Ubuntu**.
+1. **Actualizar Ubuntu**
+
+```bash
+sudo apt update
+sudo apt upgrade -y
+```
+
+Paso 2. Instalar Java
+
+Tomcat necesita Java para funcionar.
+bash
+
+sudo apt install default-jdk -y
+
+Comprueba que está instalado:
+bash
+
+java -version
+
+Paso 3. Instalar Tomcat
+
+En Ubuntu 24.04 puedes instalar Tomcat 10 con:
+bash
+
+sudo apt install tomcat10 tomcat10-admin -y
+
+Si tu Ubuntu no encuentra esos paquetes, dime qué versión tienes y adaptamos los comandos.
+Paso 4. Comprobar que funciona
+
+Ejecuta:
+bash
+
+sudo systemctl status tomcat10
+
+Debería aparecer como active (running).
+
+Si no está iniciado, puedes arrancarlo con:
+bash
+
+sudo systemctl start tomcat10
+
+Para que se inicie automáticamente al encender Ubuntu:
+bash
+
+sudo systemctl enable tomcat10
+
+Paso 5. Acceder desde el navegador
+
+Abre el navegador de tu máquina virtual y escribe:
+
+Página de Tomcat
+
+http://localhost:8080
+
+Si aparece la página de bienvenida de Apache Tomcat, ¡la instalación ha funcionado! 
+
