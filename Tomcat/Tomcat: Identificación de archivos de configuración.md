@@ -35,3 +35,6 @@ Podemos consultar su contenido con:
 ```bash
 sudo nano /etc/tomcat10/server.xml
 ```
+## **Función de cada archivo y qué elementos se pueden configurar**
+
+1. `/etc/tomcat10/server.xml`
