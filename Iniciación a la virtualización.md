@@ -103,15 +103,17 @@ Para realizar la instalación, se han seguido los siguientes pasos:
 
 Desde la terminal se ha ejecutado el siguiente comando para iniciar la instalación:
 
-bash
-> sudo ./VBoxLinuxAdditions.run
+```bash
+sudo ./VBoxLinuxAdditions.run
+```
 
 5. Este comando ejecuta el instalador de las Guest Additions con permisos de administrador, instalando los componentes necesarios para mejorar la comunicación entre Ubuntu y VirtualBox.
    
 Una vez finalizado el proceso, se ha reiniciado la máquina virtual mediante el siguiente comando:
 
-bash
-> sudo reboot
+```bash
+sudo reboot
+```
 
 6. Este reinicio permite que los nuevos componentes y controladores instalados se carguen correctamente.
    
@@ -119,8 +121,9 @@ bash
 
 Tras reiniciar la máquina virtual, se ha comprobado que las Guest Additions se encuentran funcionando mediante el siguiente comando:
 
-bash
-> lsmod | grep vboxguest
+```bash
+lsmod | grep vboxguest
+```
 
 Este comando permite consultar los módulos del núcleo de Linux que están cargados y filtrar los resultados para localizar vboxguest, que es uno de los módulos principales de VirtualBox.
 
@@ -205,64 +208,73 @@ Entre las principales ventajas que ofrece Docker destacan las siguientes:
 
 En primer lugar, se ha preparado el sistema operativo para realizar la instalación de Docker. Para ello, se han actualizado los repositorios y los paquetes de Ubuntu mediante el siguiente comando:
 
-bash
-> sudo apt update && sudo apt upgrade -y
+```bash
+sudo apt update && sudo apt upgrade -y
+```
 
 El comando _sudo apt update_ actualiza la información de los repositorios, mientras que _sudo apt upgrade -y_ instala las actualizaciones disponibles para los paquetes del sistema.
 
 A continuación, se han instalado las dependencias necesarias para realizar la descarga y posterior instalación de Docker:
 
-bash
-> sudo apt install ca-certificates curl gnupg -y
+```bash
+sudo apt install ca-certificates curl gnupg -y
+```
 
 Estos paquetes proporcionan herramientas para verificar certificados de seguridad, descargar archivos desde Internet y gestionar claves criptográficas.
 
 Una vez preparadas las dependencias, se ha comenzado con la instalación de Docker Engine. Inicialmente, se ha intentado realizar mediante el siguiente comando:
 
-bash
-> curl -fsSL https://get.docker.com | sudo sh
+```bash
+curl -fsSL https://get.docker.com | sudo sh
+```
 
 Sin embargo, al no completarse correctamente la instalación mediante este procedimiento, se ha optado por descargar primero el script de instalación y ejecutarlo posteriormente en un segundo paso.
 
 Para descargarlo, se ha utilizado:
 
-bash
-> curl -fsSL https://get.docker.com -o get-docker.sh
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+```
 
 Este comando obtiene el script oficial de instalación de Docker y lo guarda en un archivo llamado get-docker.sh.
 Una vez descargado, se ha ejecutado mediante:
 
-bash
-> sudo sh get-docker.sh
+```bash
+sudo sh get-docker.sh
+```
 
 De esta manera, se ha realizado la instalación de Docker Engine, que es el componente encargado de crear, ejecutar y gestionar los contenedores.
 
 Tras finalizar la instalación, se ha comprobado que Docker se encontraba disponible en el sistema mediante:
 
-bash
-> docker --version
+```bash
+docker --version
+```
 
 Este comando muestra la versión del cliente de Docker instalada en Ubuntu, permitiendo comprobar que está disponible desde la terminal.
 Posteriormente, se ha procedido a descargar Docker Desktop desde la página oficial de Docker. Para ello, se ha obtenido el paquete de instalación correspondiente a Ubuntu, denominado docker-desktop-amd64.deb, que se ha guardado en la carpeta Descargas.
 
 Una vez descargado, se ha accedido a dicha carpeta desde la terminal y se ha utilizado el comando:
 
-bash
-> ls
+```bash
+ls
+```
 
 Este comando muestra los archivos y directorios presentes en la ubicación actual, permitiendo comprobar que el paquete docker-desktop-amd64.deb se encuentra correctamente descargado.
 
 Después de verificar su presencia, se ha procedido a instalar Docker Desktop mediante:
 
-bash
-> sudo apt install ./docker-desktop-amd64.deb
+```bash
+sudo apt install ./docker-desktop-amd64.deb
+```
 
 Este comando utiliza el gestor de paquetes de Ubuntu para instalar el archivo descargado y gestionar las dependencias necesarias para completar la instalación.
 
 Finalmente, una vez instalado Docker, se ha realizado una prueba para comprobar que el motor funciona correctamente y que es capaz de ejecutar contenedores. Para ello, se ha utilizado el siguiente comando:
 
-bash
-> sudo docker run hello-world
+```bash
+sudo docker run hello-world
+```
 
 Este comando solicita a Docker que ejecute un contenedor a partir de la imagen hello-world, utilizada habitualmente para comprobar el correcto funcionamiento de una instalación de Docker.
 
@@ -276,14 +288,18 @@ Por tanto, se ha completado la instalación y comprobación básica de Docker en
 
 Instalación de Docker Desktop en Ubuntu
 Actualiza los repositorios:
-> sudo apt update && sudo apt upgrade -y
 
+```bash
+sudo apt update && sudo apt upgrade -y
+```
 
 <img width="599" height="314" alt="Captura26" src="https://github.com/user-attachments/assets/410721ca-f2fc-4b47-951e-c277b3170665" />
 
 Instala dependencias:
-> sudo apt install ca-certificates curl gnupg -y
 
+```bash
+sudo apt install ca-certificates curl gnupg -y
+```
 
 <img width="651" height="351" alt="Captura27" src="https://github.com/user-attachments/assets/91be60ff-a541-40bb-84f8-5890ededadbf" />
 
@@ -344,21 +360,24 @@ En primer lugar, se han buscado las imágenes de Nginx y Tomcat disponibles en D
 
 Para buscar la imagen de Nginx se ha utilizado el siguiente comando:
 
-bash
-> sudo docker search nginx
+```bash
+sudo docker search nginx
+```
 
 Este comando muestra diferentes imágenes relacionadas con Nginx disponibles en Docker Hub, proporcionando información sobre ellas, como su nombre, descripción y popularidad.
 
 A continuación, se ha realizado la misma búsqueda para Tomcat mediante:
 
-bash
-> sudo docker search tomcat
+```bash
+sudo docker search tomcat
+```
 
 De esta manera, se han localizado las imágenes necesarias para crear los dos contenedores que se utilizarán en la práctica.
 Una vez realizadas las búsquedas, se ha procedido a crear e iniciar el contenedor correspondiente al servidor web Nginx mediante el siguiente comando:
 
-bash
-> sudo docker run -d -p 8080:80 --name webserver nginx
+```bash
+sudo docker run -d -p 8080:80 --name webserver nginx
+```
 
 Este comando realiza varias operaciones:
 docker run: crea y ejecuta un nuevo contenedor.
@@ -371,8 +390,9 @@ docker run: crea y ejecuta un nuevo contenedor.
 De esta forma, se crea el contenedor que ejecutará el servidor web Nginx.
 Posteriormente, se ha creado el contenedor correspondiente al servidor de aplicaciones Tomcat utilizando:
 
-bash
-> sudo docker run -d -p 8081:8080 --name appserver tomcat
+```bash
+sudo docker run -d -p 8081:8080 --name appserver tomcat
+```
 
 En este caso, el funcionamiento es similar al anterior, pero se utilizan otros puertos y un nombre diferente:
 * **-d:** permite ejecutar el contenedor en segundo plano.
@@ -385,15 +405,17 @@ De esta manera, se dispone de dos contenedores independientes: uno destinado a e
 **Comprobación del estado de los contenedores**
 Una vez creados los dos contenedores, se ha comprobado su estado mediante el siguiente comando:
 
-bash
-> sudo docker ps
+```bash
+sudo docker ps
+```
 
 Este comando muestra los contenedores que se encuentran activos en ese momento, proporcionando información como su identificador, imagen utilizada, estado, puertos asignados y nombre.
 
 Posteriormente, también se ha utilizado:
 
-bash
-> sudo docker ps -a
+```bash
+sudo docker ps -a
+```
 
 A diferencia del comando anterior, este muestra todos los contenedores existentes, tanto los que están en ejecución como los que se encuentran detenidos o han finalizado.
 
@@ -404,8 +426,9 @@ Inicio y comprobación del servidor web Nginx
 
 Durante las primeras pruebas, se han producido algunos problemas para acceder correctamente al servidor Nginx desde el navegador. Para solucionarlo, se ha eliminado el contenedor anterior y se ha creado nuevamente, utilizando la misma configuración de puertos y el nombre webserver. Posteriormente, se ha iniciado mediante el siguiente comando:
 
-bash
-> sudo docker start webserver
+```bash
+sudo docker start webserver
+```
 
 Este comando permite iniciar un contenedor que ya ha sido creado previamente y que se encuentra detenido, sin necesidad de volver a descargar la imagen de Nginx.
 
@@ -419,21 +442,25 @@ Durante las primeras pruebas, al acceder a Tomcat desde el navegador mediante ht
 
 Para identificar el problema, se han consultado inicialmente los registros del contenedor mediante:
 
-bash
-> sudo docker logs appserver
+```bash
+sudo docker logs appserver
+```
 
 Este comando permite visualizar los mensajes generados durante la ejecución de Tomcat y comprobar si se han producido errores.
 
 Posteriormente, se ha revisado el contenido del directorio donde Tomcat almacena las aplicaciones web mediante los siguientes comandos:
 
-bash
-> sudo docker exec appserver ls /usr/local/tomcat/webapps
+```bash
+sudo docker exec appserver ls /usr/local/tomcat/webapps
+```
 
-bash
-> sudo docker exec appserver ls -la /usr/local/tomcat/webapps/
+```bash
+sudo docker exec appserver ls -la /usr/local/tomcat/webapps/
+```
 
-bash
-> sudo docker exec appserver ls -1 /usr/local/tomcat/webapps/
+```bash
+sudo docker exec appserver ls -1 /usr/local/tomcat/webapps/
+```
 
 Estos comandos permiten consultar los archivos y directorios existentes en webapps, que es la ubicación donde Tomcat almacena y despliega las aplicaciones web.
 
@@ -441,8 +468,9 @@ Tras realizar estas comprobaciones, se ha decidido descargar una aplicación web
 
 Para ello, se ha utilizado el siguiente comando:
 
-bash
-> sudo docker exec appserver sh -c 'curl -fL https://tomcat.apache.org/tomcat-9.0-doc/appdev/sample/sample.war -o /usr/local/tomcat/webapps/ROOT.war'
+```bash
+sudo docker exec appserver sh -c 'curl -fL https://tomcat.apache.org/tomcat-9.0-doc/appdev/sample/sample.war -o /usr/local/tomcat/webapps/ROOT.war'
+```
 
 Este comando descarga una aplicación web de ejemplo desde la documentación oficial de Apache Tomcat y la guarda dentro del directorio webapps con el nombre ROOT.war.
 
@@ -450,12 +478,15 @@ Al utilizar este nombre, Tomcat identifica la aplicación como la aplicación pr
 
 Una vez realizada la descarga, se ha comprobado que el archivo se encontraba correctamente ubicado mediante:
 
-bash
-> sudo docker exec appserver ls -l /usr/local/tomcat/webapps/
+```bash
+sudo docker exec appserver ls -l /usr/local/tomcat/webapps/
+```
 
 Tras disponer del archivo ROOT.war, Tomcat ha podido desplegar la aplicación web de ejemplo y mostrar su contenido correctamente al acceder desde el navegador a:
 
+```text
 **http://localhost:8081**
+```
 
 De esta manera, se ha solucionado el problema inicial y se ha conseguido visualizar correctamente la aplicación web de ejemplo proporcionada por Apache Tomcat.
 
@@ -464,15 +495,17 @@ Una vez iniciados y configurados los dos contenedores, se ha comprobado su funci
 
 Para acceder al servidor web Nginx, se ha introducido la siguiente dirección:
 
-text
+```text
 **http://localhost:8080**
+```
 
 Al acceder, se muestra la página de bienvenida predeterminada de Nginx, confirmando que el contenedor webserver está funcionando y atendiendo correctamente las peticiones realizadas a través del puerto 8080.
 
 Por otro lado, para comprobar el servidor de aplicaciones Tomcat, se ha accedido a:
 
-text
+```text
 **http://localhost:8081**
+```
 
 En este caso, se muestra la aplicación web de ejemplo que se ha descargado previamente y desplegado en el directorio webapps de Tomcat.
 La visualización de esta aplicación permite comprobar que Tomcat ha conseguido desplegar el archivo WAR y que responde correctamente a las peticiones realizadas desde el navegador a través del puerto 8081.
