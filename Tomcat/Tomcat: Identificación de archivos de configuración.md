@@ -40,36 +40,74 @@ sudo nano /etc/tomcat10/server.xml
 ### 1. **server.xml**
 
 **Configuración principal**
+
 Es el archivo principal de configuración de _Tomcat_. Define cómo se inicia y organiza el servidor y
 cómo recibe las conexiones de los usuarios.
 
 Elementos que se pueden configurar:
-• **Server:** representa la instancia principal de Tomcat.
-• **Service:** agrupa los conectores y el motor que procesa las peticiones.
-• **Connector:** configura los puertos y protocolos, como HTTP (8080).
-• **Engine:** gestiona el procesamiento de las peticiones.
-• **Host:** permite configurar los hosts virtuales.
-• **Context:** define las aplicaciones web desplegadas.
+* **Server:** representa la instancia principal de Tomcat.
+* **Service:** agrupa los conectores y el motor que procesa las peticiones.
+* **Connector:** configura los puertos y protocolos, como HTTP (8080).
+* **Engine:** gestiona el procesamiento de las peticiones.
+* **Host:** permite configurar los hosts virtuales.
+* **Context:** define las aplicaciones web desplegadas.
 
 **Ubicación:** `/etc/tomcat10/server.xml`
 
 ### 2. **web.xml**
 
 **Configuración de aplicaciones web**
+
 Es un archivo que define la configuración general de las aplicaciones web. Permite establecer cómo
 se comportan las aplicaciones desplegadas en _Tomcat_.
 
 Elementos que se pueden configurar:
-• **servlet:** define los servlets de una aplicación.
-• **servlet-mapping:** relaciona los servlets con las direcciones URL.
-• **welcome-file-list:** establece los archivos que se muestran al acceder a una
+* **servlet:** define los servlets de una aplicación.
+* **servlet-mapping:** relaciona los servlets con las direcciones URL.
+* **welcome-file-list:** establece los archivos que se muestran al acceder a una
 aplicación.
-• **session-config:** configura las sesiones de usuario.
-• **error-page:** define las páginas que se muestran cuando se producen errores.
-• **filter:** permite configurar filtros para las peticiones.
+* **session-config:** configura las sesiones de usuario.
+* **error-page:** define las páginas que se muestran cuando se producen errores.
+* **filter:** permite configurar filtros para las peticiones.
 
 **Ubicación:** `/etc/tomcat10/web.xml`
 
 Este archivo proporciona valores predeterminados para las aplicaciones web, aunque cada
 aplicación puede tener su propio **WEB-INF/web.xml**.
+
+### 3. **tomcat-users.xml**
+
+**Usuarios y permisos**
+
+Es el archivo encargado de gestionar los usuarios, las contraseñas y los roles de acceso a las
+herramientas de administración de _Tomcat_.
+
+Elementos que se pueden configurar:
+* **user:** permite crear usuarios y asignarles un nombre y contraseña.
+* **role:** define los permisos o roles disponibles.
+* **roles:** permite asignar uno o varios roles a un usuario.
+Algunos roles habituales son:
+* **manager-gui:** permite acceder a la interfaz gráfica de Manager.
+* **admin-gui:** permite acceder a la interfaz gráfica de Host Manager.
+
+**Ubicación:** /etc/tomcat10/tomcat-users.xml
+
+### 4. **context.xml**
+
+**Configuración de aplicaciones**
+
+Es un archivo que permite configurar los contextos de las aplicaciones web. Define diferentes
+opciones relacionadas con su ejecución y acceso a recursos.
+
+Elementos que se pueden configurar:
+* **Context:** define el contexto de una aplicación web.
+* **Environment:** permite establecer variables de entorno.
+* **Resource:** configura recursos externos, como conexiones a bases de datos.
+* **ResourceLink:** permite enlazar recursos compartidos.
+* **WatchedResource:** indica archivos que Tomcat debe vigilar para detectar cambios.
+
+**Ubicación:** `/etc/tomcat10/context.xml`
+
+Este archivo contiene una configuración predeterminada que se aplica a las aplicaciones web, salvo
+que una aplicación tenga configuraciones específicas que la modifiquen.
 
