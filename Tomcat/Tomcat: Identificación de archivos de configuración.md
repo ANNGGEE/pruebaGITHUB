@@ -168,10 +168,12 @@ Para consultar el contenido de los archivos de configuración de Tomcat, se pued
 
 También podemos consultar los archivos con _cat_, sin modificarlos:
 
-`sudo cat /etc/tomcat10/server.xml`
-`sudo cat /etc/tomcat10/web.xml`
-`sudo cat /etc/tomcat10/tomcat-users.xml`
-`sudo cat /etc/tomcat10/context.xml`
+```bash
+sudo cat /etc/tomcat10/server.xml
+sudo cat /etc/tomcat10/web.xml
+sudo cat /etc/tomcat10/tomcat-users.xml
+sudo cat /etc/tomcat10/context.xml
+```
 
 En lugar de consultar cada archivo de configuración de Tomcat mediante un comando independiente, se ha utilizado el siguiente comando para visualizar conjuntamente el contenido de los archivos del directorio /etc/tomcat10:
 
