@@ -17,7 +17,7 @@ ls -l /etc/tomcat10/
 Para localizar los cuatro archivos concretos:
 
 ```bash
-sudo find /etc/tomcat10/ -name "server.xml" -o -name "web.xml" -o -name "tomcat- users.xml" -o -name "context.xml"
+sudo find /etc/tomcat10/ -name "server.xml" -o -name "web.xml" -o -name "tomcat -users.xml" -o -name "context.xml"
 ```
 
 Los archivos que deben aparecer son:
@@ -160,7 +160,7 @@ ls -l /etc/tomcat10/tomcat-users.xml
 ls -l /etc/tomcat10/context.xml
 ```
 
-Para consultar el contenido de los archivos de configuración de Tomcat, se puede utilizar el siguiente comando, que permite visualizar los archivos ubicados en el directorio /etc/tomcat10:
+Para comprobar la existencia de los archivos de configuración de Tomcat, se ha utilizado el comando ls, que permite listar el contenido del directorio correspondiente:
 
 ```bash
 ls -l /etc/tomcat10`
@@ -177,17 +177,17 @@ sudo cat /etc/tomcat10/tomcat-users.xml
 sudo cat /etc/tomcat10/context.xml
 ```
 
-En lugar de consultar cada archivo de configuración de Tomcat mediante un comando independiente, se ha utilizado el siguiente comando para visualizar conjuntamente el contenido de los archivos del directorio /etc/tomcat10:
+También se puede realizar una búsqueda específica de los cuatro archivos mediante el comando find:
 
 ```bash
-sudo find /etc/tomcat10/ -name "server-xml" -o -name "web.xml" -o -name "tomcat-users.xml" -o -name "context.xml"
+sudo find /etc/tomcat10/ -name "server.xml" -o -name "web.xml" -o -name "tomcat-users.xml" -o -name "context.xml"
 ```
 
 <img width="1346" height="266" alt="sudofindnano" src="https://github.com/user-attachments/assets/9391e274-7e2f-45e7-8550-41d1570979d9" />
 
 **Localización y consulta de los archivos de configuración**
 
-Para localizar y consultar los cuatro archivos principales de configuración de Tomcat, se ha utilizado el editor de texto nano mediante el comando sudo, que permite acceder a los archivos con permisos de administrador.
+Para consultar los archivos de configuración se ha utilizado el editor de texto nano, ejecutándolo con permisos de administrador mediante sudo.
 
 Los comandos utilizados han sido los siguientes:
 
