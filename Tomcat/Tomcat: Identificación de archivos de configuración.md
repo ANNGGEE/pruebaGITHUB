@@ -22,21 +22,13 @@ sudo find /etc/tomcat10/ -name "server.xml" -o -name "web.xml" -o -name "tomcat-
 
 Los archivos que deben aparecer son:
 
-```bash
-• /etc/tomcat10/server.xml
-```
+• `/etc/tomcat10/server.xml`
 
-```bash
-• /etc/tomcat10/web.xml
-```
+• `/etc/tomcat10/web.xml`
 
-```bash
-• /etc/tomcat10/tomcat-users.xml
-```
+• `/etc/tomcat10/tomcat-users.xml`
 
-```bash
-• /etc/tomcat10/context.xml
-```
+• `/etc/tomcat10/context.xml`
 
 Podemos consultar su contenido con:
 
