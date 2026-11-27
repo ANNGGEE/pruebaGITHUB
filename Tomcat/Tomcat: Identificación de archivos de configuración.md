@@ -117,24 +117,24 @@ que una aplicación tenga configuraciones específicas que la modifiquen.
                           |
        +------------------+------------------+
        |                  |                  |
-   server.xml          web.xml        tomcat-users.xml
-       |                  |                  |
-  Configuración      Configuración       Usuarios
-  del servidor       de aplicaciones     y roles
-       |                  |                  |
-  - Puertos           - Servlets          - Manager
-  - Conectores        - Filtros           - Host Manager
-  - Engine            - Sesiones
-  - Host              - Páginas de error
-  - Contextos             |
-                      context.xml
-                          |
-                Configuración de contextos
-                          |
-                   - Recursos
-                   - Variables
-                   - Opciones
-
+     server.xml          web.xml        tomcat-users.xml
+         |                  |                  |
+    Configuración      Configuración       Usuarios
+    del servidor       de aplicaciones     y roles
+         |                  |                  |
+    - Puertos           - Servlets          - Manager
+    - Conectores        - Filtros           - Host Manager
+    - Engine            - Sesiones
+    - Host              - Páginas de error
+    - Contextos
+                            |
+                        context.xml
+                            |
+                  Configuración de contextos
+                            |
+                     - Recursos
+                     - Variables
+                     - Opciones
 
 **Explicación del mapa:**
 * **server.xml** configura la estructura general del servidor y los conectores que reciben las peticiones.
