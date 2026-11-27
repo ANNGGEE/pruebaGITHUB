@@ -231,4 +231,4 @@ sudo nano /etc/tomcat10/context.xml
 
 A través de estos comandos se ha podido consultar el contenido de cada archivo e identificar su función y los diferentes elementos que se pueden configurar en ellos.
 
-En esta práctica he aprendido a localizar e identificar los principales archivos de configuración de Apache Tomcat. He conocido la función de server.xml, web.xml, tomcat-users.xml y context.xml, así como los diferentes parámetros que permiten configurar el servidor, las aplicaciones web, los usuarios y los recursos. Además, he realizado un mapa visual para comprender mejor cómo se relacionan estos archivos dentro del funcionamiento de Tomcat.
+En esta práctica he aprendido a localizar e identificar los principales archivos de configuración de Apache Tomcat. He conocido la función de `server.xml`, `web.xml`, `tomcat-users.xml` y `context.xml`, así como los diferentes parámetros que permiten configurar el servidor, las aplicaciones web, los usuarios y los recursos. Además, he realizado un mapa visual para comprender mejor cómo se relacionan estos archivos dentro del funcionamiento de Tomcat.
