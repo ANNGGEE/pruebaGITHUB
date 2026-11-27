@@ -162,7 +162,9 @@ ls -l /etc/tomcat10/context.xml
 
 Para consultar el contenido de los archivos de configuración de Tomcat, se puede utilizar el siguiente comando, que permite visualizar los archivos ubicados en el directorio /etc/tomcat10:
 
-`ls -l /etc/tomcat10`
+```bash
+ls -l /etc/tomcat10`
+```
 
 <img width="924" height="508" alt="CD Y LS -L" src="https://github.com/user-attachments/assets/c80f09ab-6cb8-4466-b17c-02e9da4e4d41" />
 
@@ -177,7 +179,9 @@ sudo cat /etc/tomcat10/context.xml
 
 En lugar de consultar cada archivo de configuración de Tomcat mediante un comando independiente, se ha utilizado el siguiente comando para visualizar conjuntamente el contenido de los archivos del directorio /etc/tomcat10:
 
-`sudo find /etc/tomcat10/ -name "server-xml" -o -name "web.xml" -o -name "tomcat-users.xml" -o -name "context.xml"`
+```bash
+sudo find /etc/tomcat10/ -name "server-xml" -o -name "web.xml" -o -name "tomcat-users.xml" -o -name "context.xml"
+```
 
 <img width="1346" height="266" alt="sudofindnano" src="https://github.com/user-attachments/assets/9391e274-7e2f-45e7-8550-41d1570979d9" />
 
