@@ -126,8 +126,7 @@ que una aplicación tenga configuraciones específicas que la modifiquen.
   - Conectores        - Filtros           - Host Manager
   - Engine            - Sesiones
   - Host              - Páginas de error
-  - Contextos
-                          |
+  - Contextos             |
                       context.xml
                           |
                 Configuración de contextos
@@ -135,6 +134,7 @@ que una aplicación tenga configuraciones específicas que la modifiquen.
                    - Recursos
                    - Variables
                    - Opciones
+
 
 **Explicación del mapa:**
 * **server.xml** configura la estructura general del servidor y los conectores que reciben las peticiones.
