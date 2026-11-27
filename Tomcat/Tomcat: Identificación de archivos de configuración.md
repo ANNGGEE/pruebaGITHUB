@@ -22,13 +22,21 @@ sudo find /etc/tomcat10/ -name "server.xml" -o -name "web.xml" -o -name "tomcat-
 
 Los archivos que deben aparecer son:
 
-• `/etc/tomcat10/server.xml`
+```bash
+• /etc/tomcat10/server.xml
+```
 
-• `/etc/tomcat10/web.xml`
+```bash
+• /etc/tomcat10/web.xml
+```
 
-• `/etc/tomcat10/tomcat-users.xml`
+```bash
+• /etc/tomcat10/tomcat-users.xml
+```
 
-• `/etc/tomcat10/context.xml`
+```bash
+• /etc/tomcat10/context.xml
+```
 
 Podemos consultar su contenido con:
 
@@ -187,7 +195,9 @@ Para localizar y consultar los cuatro archivos principales de configuración de 
 
 Los comandos utilizados han sido los siguientes:
 
-`sudo nano /etc/tomcat10/server.xml`
+```bash
+sudo nano /etc/tomcat10/server.xml
+```
 
 <img width="1346" height="266" alt="sudofindnano" src="https://github.com/user-attachments/assets/e87af785-5e79-4410-b593-eb1cd2e09dac" />
 
@@ -195,7 +205,9 @@ Los comandos utilizados han sido los siguientes:
 
 <img width="1365" height="726" alt="servernano" src="https://github.com/user-attachments/assets/8f90a421-2f20-4a8b-9ba5-e39925e7b206" />
 
-`sudo nano /etc/tomcat10/web.xml`
+```bash
+sudo nano /etc/tomcat10/web.xml
+```
 
 <img width="808" height="40" alt="SudoNanoWeb" src="https://github.com/user-attachments/assets/60c4dc32-bee5-4aca-8bf6-52c39da77259" />
 
@@ -203,7 +215,9 @@ Los comandos utilizados han sido los siguientes:
 
 <img width="955" height="727" alt="Web2" src="https://github.com/user-attachments/assets/0940de20-6edd-4d52-ba3c-ec4e2c8213be" />
 
-`sudo nano /etc/tomcat10/tomcat-users.xml`
+```bash
+sudo nano /etc/tomcat10/tomcat-users.xml
+```
 
 <img width="939" height="66" alt="SudoNanoTomcatUsers" src="https://github.com/user-attachments/assets/69c2fa10-a1be-41ea-bfaa-3778975c57e0" />
 
@@ -211,7 +225,9 @@ Los comandos utilizados han sido los siguientes:
 
 <img width="925" height="724" alt="TomcatUsers2" src="https://github.com/user-attachments/assets/be7633cd-fc99-412f-8e6c-d3c02daa97ab" />
 
-`sudo nano /etc/tomcat10/context.xml`
+```bash
+sudo nano /etc/tomcat10/context.xml
+```
 
 <img width="913" height="44" alt="SudoNanoContext" src="https://github.com/user-attachments/assets/e6bbc012-d48f-44aa-89c0-cc952ba511b6" />
 
