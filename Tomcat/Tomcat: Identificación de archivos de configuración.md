@@ -17,7 +17,7 @@ ls -l /etc/tomcat10/
 Para localizar los cuatro archivos concretos:
 
 ```bash
-sudo find /etc/tomcat10/ -name "server.xml" -o -name "web.xml" -o -name "tomcat -users.xml" -o -name "context.xml"
+sudo find /etc/tomcat10/ -name "server.xml" -o -name "web.xml" -o -name "tomcat-users.xml" -o -name "context.xml"
 ```
 
 Los archivos que deben aparecer son:
@@ -160,10 +160,10 @@ ls -l /etc/tomcat10/tomcat-users.xml
 ls -l /etc/tomcat10/context.xml
 ```
 
-Para comprobar la existencia de los archivos de configuración de Tomcat, se ha utilizado el comando ls, que permite listar el contenido del directorio correspondiente:
+Para comprobar la existencia de los archivos de configuración de Tomcat, se ha utilizado el comando ls, que permite listar el contenido del directorio y mostrar información detallada de los archivos.
 
 ```bash
-ls -l /etc/tomcat10`
+ls -l /etc/tomcat10
 ```
 
 <img width="924" height="508" alt="CD Y LS -L" src="https://github.com/user-attachments/assets/c80f09ab-6cb8-4466-b17c-02e9da4e4d41" />
