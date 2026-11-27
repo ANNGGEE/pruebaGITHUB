@@ -90,7 +90,7 @@ Algunos roles habituales son:
 * **manager-gui:** permite acceder a la interfaz gráfica de Manager.
 * **admin-gui:** permite acceder a la interfaz gráfica de Host Manager.
 
-**Ubicación:** /etc/tomcat10/tomcat-users.xml
+**Ubicación:** `/etc/tomcat10/tomcat-users.xml`
 
 ### 4. **context.xml**
 
@@ -111,3 +111,40 @@ Elementos que se pueden configurar:
 Este archivo contiene una configuración predeterminada que se aplica a las aplicaciones web, salvo
 que una aplicación tenga configuraciones específicas que la modifiquen.
 
+## **Mapa Visual de Dependencias**
+
+                    APACHE TOMCAT
+                          |
+       +------------------+------------------+
+       |                  |                  |
+   server.xml          web.xml        tomcat-users.xml
+       |                  |                  |
+  Configuración      Configuración       Usuarios
+  del servidor       de aplicaciones     y roles
+       |                  |                  |
+  - Puertos           - Servlets          - Manager
+  - Conectores        - Filtros           - Host Manager
+  - Engine            - Sesiones
+  - Host              - Páginas de error
+  - Contextos
+                          |
+                      context.xml
+                          |
+                Configuración de contextos
+                          |
+                   - Recursos
+                   - Variables
+                   - Opciones
+
+**Explicación del mapa:**
+* **server.xml** configura la estructura general del servidor y los conectores que reciben las peticiones.
+
+* **web.xml** establece las reglas y configuraciones generales de las aplicaciones web.
+  
+* **tomcat-users.xml** gestiona los usuarios y sus permisos para acceder a las herramientas administrativas.
+
+* **context.xml** define opciones y recursos asociados a los contextos de las aplicaciones.
+  
+Los cuatro archivos tienen funciones diferentes, pero trabajan conjuntamente para permitir que _Tomcat_ funcione y administre las aplicaciones web.
+
+El mapa representa las relaciones funcionales entre los archivos, no significa que unos archivos importen directamente a los otros.
